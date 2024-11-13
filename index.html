@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuneCityMarathon</title>
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+</head>
+
+<body>
+    <!-- 
+    - #HEADER
+  -->
+    <header class="header" data-header>
+        <div class="container">
+            <a href="#" class="logo">PuneCityMarathon</a>
+            <nav class="navbar" data-navbar>
+                <div class="wrapper">
+                    <a href="#" class="logo">PuneCityMarathon</a>
+                    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </button>
+                </div>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="#home" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="navbar-link" data-nav-link>AboutUs
+                        <ion-icon name="chevron-down-outline" class="mobile-arrow"></ion-icon>
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="navbar-link" data-nav-link>Race Categories
+                        <ion-icon name="chevron-down-outline" class="mobile-arrow"></ion-icon>
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">5K</a></li>
+                            <li><a href="#">10K</a></li>
+                            <li><a href="#">Half Marathon</a></li>
+                            <li><a href="#">Full Marathon</a></li>
+                            <li><a href="#">Ultra Marathon</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="navbar-link" data-nav-link>Philanthropy
+                        <ion-icon name="chevron-down-outline" class="mobile-arrow"></ion-icon>
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Our Impact</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Volunteer</a></li>
+                            <li><a href="#">Donate</a></li>
+                            <li><a href="#">Events</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="navbar-link" data-nav-link>Results
+                        <ion-icon name="chevron-down-outline" class="mobile-arrow"></ion-icon>
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">2023 Results</a></li>
+                            <li><a href="#">2022 Results</a></li>
+                            <li><a href="#">2021 Results</a></li>
+                            <li><a href="#">2020 Results</a></li>
+                            <li><a href="#">Archive</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+            <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+            <a href="#" class="btn-outline">Contact Us</a>
+            <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+    </header>
+
+    <!-- 
+        - #ABOUT
+      -->
+    <section class="section about" id="about" aria-label="about">
+        <div class="container">
+            <figure class="about-banner">
+                <img src="./assets/images/about-banner.png" width="802" height="654" loading="lazy" alt="about banner" class="w-100">
+            </figure>
+            <div class="about-content">
+                <h2 class="h2-sm section-title">We create some things, Design for your success future.</h2>
+                <p class="section-text">
+                    Lorem Ipsum is simply dumm of free available in market the way printing and typesetting industry has been the industrys standard dummy text ever.
+                </p>
+                <ul class="about-list">
+                    <li class="has-before">
+                        Price of additional materials or parts (if needed)
+                    </li>
+                    <li class="has-before">
+                        Transportation cost for carrying new materials/parts
+                    </li>
+                    <li class="has-before">
+                        You will get 100% money back offer.
+                    </li>
+                </ul>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary">Know More</a>
+                    <button class="flex-btn">
+                <div class="btn-icon">
+                  <ion-icon name="medal-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <span class="span">10+ Years Experience</span>
+              </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 
+    - #FOOTER
+  -->
+    <footer class="footer">
+        <div class="footer-top section">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Hoolix</a>
+                    <p class="footer-text">
+                        Lorem ipsum dolor sit amet consecte tur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+                    </p>
+                    <form action="" class="newsletter-form">
+                        <input type="email" name="email_address" placeholder="Enter your email" required class="email-field">
+                        <button type="submit" class="form-btn">
+              <ion-icon name="paper-plane" aria-hidden="true"></ion-icon>
+            </button>
+                    </form>
+                </div>
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Our Services</p>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Strategy & Research</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Web Development</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Web Solution</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Digital Merketing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">App Design</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">App Development</a>
+                    </li>
+                </ul>
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Company</p>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">About Company</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Our Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Our Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Our Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Latest News</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Contact Us</p>
+                    </li>
+                    <li class="footer-item">
+                        <ion-icon name="location" aria-hidden="true"></ion-icon>
+                        <address class="contact-link address">
+              4517 Washington Ave. Manchester, Kentucky 39495
+            </address>
+                    </li>
+
+                    <li class="footer-item">
+                        <ion-icon name="call" aria-hidden="true"></ion-icon>
+
+                        <a href="tel:+7894631546876" class="contact-link">+7894631546876</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <ion-icon name="mail" aria-hidden="true"></ion-icon>
+
+                        <a href="mailto:info@hoolix.com" class="contact-link">info@hoolix.com</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <ul class="social-list">
+
+                            <li>
+                                <a href="#" class="social-link">
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="social-link">
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="social-link">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="social-link">
+                                    <ion-icon name="logo-pinterest"></ion-icon>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">
+                    &copy; 2022 Hoolix | All Rights Reserved by <a href="#" class="copyright-link">codewithsadee</a>
+                </p>
+                <ul class="footer-bottom-list">
+                    <li>
+                        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-bottom-link">Terms of Use</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+    <!-- 
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
