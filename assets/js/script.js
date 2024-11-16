@@ -77,7 +77,7 @@ dropdowns.forEach(dropdown => {
 const header = document.querySelector("[data-header]");
 
 const headerActive = function () {
-  window.scrollY > 100 ? header.classList.add("active")
+  window.scrollY > 20 ? header.classList.add("active")
     : header.classList.remove("active");
 }
 
@@ -94,3 +94,5 @@ const accordionAction = document.querySelectorAll("[data-accordion-action]");
 const toggleAccordion = function () { this.classList.toggle("active"); }
 
 addEventOnElem(accordionAction, "click", toggleAccordion);
+
+

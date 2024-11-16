@@ -289,6 +289,82 @@ body {
 
 
 /*-----------------------------------*\
+  #Countdown Stripe
+\*-----------------------------------*/
+
+
+/* Countdown Strip */
+
+.countdown-strip {
+    background-color: #f97316;
+    /* Orange background */
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Ensure it stays on top */
+    font-size: 0.9rem;
+    transition: transform 0.3s ease-in-out;
+    /* For smooth disappearance on scroll */
+}
+
+
+/* Header with margin-top for space when countdown is visible */
+
+.header {
+    transition: margin-top 0.3s ease-in-out;
+    /* Smooth transition for margin */
+    margin-top: 30px;
+    /* Adjust this if necessary */
+}
+
+
+/* Countdown Content */
+
+.countdown-content {
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.countdown-timer {
+    font-weight: bold;
+}
+
+.event-info {
+    white-space: nowrap;
+    /* Prevents text from wrapping */
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 600px) {
+    .countdown-content {
+        gap: 5px;
+    }
+    .event-info {
+        font-size: 0.8rem;
+    }
+    .countdown-timer {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Class to remove header margin when countdown strip is hidden */
+
+.header.no-margin-top {
+    margin-top: 0;
+}
+
+
+/*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
 

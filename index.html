@@ -27,6 +27,15 @@
 </head>
 
 <body>
+
+    <!-- Countdown Strip -->
+    <div class="countdown-strip" id="countdownStrip">
+        <div class="countdown-content">
+            <span class="event-info">Pune City Marathon | 19th January 2025 |</span>
+            <span class="countdown-timer" id="countdownTimer"></span>
+        </div>
+    </div>
+
     <!-- 
     - #HEADER
   -->
@@ -275,6 +284,54 @@
     <!-- 
     - custom js link
   -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const countdownStrip = document.getElementById("countdownStrip");
+            const countdownTimer = document.getElementById("countdownTimer");
+            const header = document.querySelector(".header");
+
+            // Event date - Update this to the desired event date
+            const eventDate = new Date("2025-01-19T00:00:00");
+
+            // Function to calculate the time left until the event
+            const calculateTimeLeft = () => {
+                const now = new Date();
+                const timeDifference = eventDate - now;
+
+                if (timeDifference <= 0) {
+                    countdownTimer.textContent = "Event Started!";
+                    return;
+                }
+
+                const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                countdownTimer.textContent = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+            };
+
+            // Initial calculation
+            calculateTimeLeft();
+
+            // Update countdown every second
+            setInterval(calculateTimeLeft, 1000);
+
+            // Function to hide the countdown strip on scroll and adjust header margin
+            const handleScroll = () => {
+                if (window.scrollY > 10) { // Adjust to hide on even slight scroll
+                    countdownStrip.style.transform = "translateY(-100%)"; // Hide strip on scroll
+                    header.classList.add('no-margin-top'); // Remove header margin-top
+                } else {
+                    countdownStrip.style.transform = "translateY(0)"; // Show strip when scrolled to top
+                    header.classList.remove('no-margin-top'); // Restore header margin-top
+                }
+            };
+
+            // Listen to the scroll event
+            window.addEventListener("scroll", handleScroll);
+        });
+    </script>
     <script src="./assets/js/script.js"></script>
     <!-- 
     - ionicon link
