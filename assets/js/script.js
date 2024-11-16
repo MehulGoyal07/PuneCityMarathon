@@ -41,12 +41,12 @@ addEventOnElem(navToggler, "click", toggleNavbar);
 
 const navLinks = document.querySelectorAll("[data-nav-link]");
 
-const closeNavbar = function () {
-  navbar.classList.remove("active");
-  overlay.classList.remove("active");
-}
+// const closeNavbar = function () {
+//   navbar.classList.remove("active");
+//   overlay.classList.remove("active");
+// }
 
-addEventOnElem(navLinks, "click", closeNavbar);
+// addEventOnElem(navLinks, "click", closeNavbar);
 
 // Toggle dropdown for mobile
 const dropdowns = document.querySelectorAll('.dropdown');
