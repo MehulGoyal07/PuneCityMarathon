@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuneCityMarathon</title>
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+</head>
+
+<body>
+
+    <!-- Countdown Strip -->
+    <div class="countdown-strip" id="countdownStrip">
+        <div class="countdown-content">
+            <span class="event-info">Pune City Marathon | 19th January 2025 |</span>
+            <span class="countdown-timer" id="countdownTimer"></span>
+        </div>
+    </div>
+
+    <!-- 
+    - #HEADER
+  -->
+    <header class="header" data-header>
+        <div class="container">
+            <a href="#" class="logo">PuneCityMarathon</a>
+            <nav class="navbar" data-navbar>
+                <div class="wrapper">
+                    <a href="#" class="logo">PuneCityMarathon</a>
+                    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </button>
+                </div>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="#home" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="navbar-link" data-nav-link>AboutUs
+                        <ion-icon name="chevron-down-outline" class="mobile-arrow"></ion-icon>
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="navbar-link" data-nav-link>Race Categories
+                        <ion-icon name="chevron-down-outline" class="mobile-arrow"></ion-icon>
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">5K</a></li>
+                            <li><a href="#">10K</a></li>
+                            <li><a href="#">Half Marathon</a></li>
+                            <li><a href="#">Full Marathon</a></li>
+                            <li><a href="#">Ultra Marathon</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="navbar-link" data-nav-link>Philanthropy
+                        <ion-icon name="chevron-down-outline" class="mobile-arrow"></ion-icon>
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Our Impact</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Volunteer</a></li>
+                            <li><a href="#">Donate</a></li>
+                            <li><a href="#">Events</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="navbar-link" data-nav-link>Results
+                        <ion-icon name="chevron-down-outline" class="mobile-arrow"></ion-icon>
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">2023 Results</a></li>
+                            <li><a href="#">2022 Results</a></li>
+                            <li><a href="#">2021 Results</a></li>
+                            <li><a href="#">2020 Results</a></li>
+                            <li><a href="#">Archive</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+            <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+            <a href="#" class="btn-outline">Contact Us</a>
+            <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+    </header>
+
+    <!-- 
+        - #Race Category
+      -->
+    <section class="race-category">
+        <div class="container">
+            <h1 class="section-heading">Race Categories</h1>
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <!-- Card 1 -->
+                    <div class="race-card">
+                        <div class="race-card-bg" style="background-image: url('./assets/images/about-banner.png');">
+                            <div class="race-card-overlay">
+                                <h3 class="race-card-title">5K Race</h3>
+                                <a href="category-details.html" title="Learn More">
+                                    <ion-icon name="arrow-forward-outline" class="card-arrow"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="race-card">
+                        <div class="race-card-bg" style="background-image: url('./assets/images/about-banner.png');">
+                            <div class="race-card-overlay">
+                                <h3 class="race-card-title">10K Race</h3>
+                                <a href="category-details.html" title="Learn More">
+                                    <ion-icon name="arrow-forward-outline" class="card-arrow"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="race-card">
+                        <div class="race-card-bg" style="background-image: url('./assets/images/about-banner.png');">
+                            <div class="race-card-overlay">
+                                <h3 class="race-card-title">10K Race</h3>
+                                <a href="category-details.html" title="Learn More">
+                                    <ion-icon name="arrow-forward-outline" class="card-arrow"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="race-card">
+                        <div class="race-card-bg" style="background-image: url('./assets/images/about-banner.png');">
+                            <div class="race-card-overlay">
+                                <h3 class="race-card-title">10K Race</h3>
+                                <a href="category-details.html" title="Learn More">
+                                    <ion-icon name="arrow-forward-outline" class="card-arrow"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="race-card">
+                        <div class="race-card-bg" style="background-image: url('./assets/images/about-banner.png');">
+                            <div class="race-card-overlay">
+                                <h3 class="race-card-title">10K Race</h3>
+                                <a href="category-details.html" title="Learn More">
+                                    <ion-icon name="arrow-forward-outline" class="card-arrow"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="race-card">
+                        <div class="race-card-bg" style="background-image: url('./assets/images/about-banner.png');">
+                            <div class="race-card-overlay">
+                                <h3 class="race-card-title">10K Race</h3>
+                                <a href="category-details.html" title="Learn More">
+                                    <ion-icon name="arrow-forward-outline" class="card-arrow"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add More Cards -->
+                    <div class="race-card">
+                        <div class="race-card-bg" style="background-image: url('./assets/images/about-banner.png');">
+                            <div class="race-card-overlay">
+                                <h3 class="race-card-title">Half Marathon</h3>
+                                <a href="category-details.html" title="Learn More">
+                                    <ion-icon name="arrow-forward-outline" class="card-arrow"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="slider-buttons">
+                <button class="slider-btn prev-btn" aria-label="Previous">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </button>
+                <button class="slider-btn next-btn" aria-label="Next">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        - #Dual Slider First
+      -->
+    <div class="dual-slider-first-section">
+        <div class="dual-slider-first-container">
+            <!-- Left Slider -->
+            <div class="dual-slider-first-wrapper" id="left-slider-first">
+                <div class="dual-slider-first-content">
+                    <img src="./assets/images/birthday-cover.jpg" class="slider-first-image active" alt="Slide 1">
+                    <img src="./assets/images/corporate-cover.jpg" class="slider-first-image" alt="Slide 2">
+                    <img src="./assets/images/catering-cover.JPG" class="slider-first-image" alt="Slide 3">
+                </div>
+            </div>
+
+            <!-- Right Slider -->
+            <div class="dual-slider-first-wrapper" id="right-slider-first">
+                <div class="dual-slider-first-content">
+                    <img src="./assets/images/birthday-cover.jpg" class="slider-first-image active" alt="Slide 1">
+                    <img src="./assets/images/corporate-cover.jpg" class="slider-first-image" alt="Slide 2">
+                    <img src="./assets/images/catering-cover.JPG" class="slider-first-image" alt="Slide 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+        - #Initiative Section
+      -->
+
+    <!-- Initiatives Section -->
+    <div class="initiatives-section">
+        <h1 class="section-heading">Our Initiatives</h1>
+        <p class="section-subheading">Explore our impactful projects and efforts aimed at making a difference.</p>
+
+        <div class="initiatives-cards">
+            <!-- First Card -->
+            <div class="card" id="card-1">
+                <div class="card-img" style="background-image: url('./assets/images/hero-banner.png');">
+                    <div class="card-overlay">
+                        <h3>Initiative 1</h3>
+                        <a href="link-to-page1.html" class="card-link">
+                            <ion-icon name="arrow-forward-outline" class="card-arrow"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Card -->
+            <div class="card" id="card-2">
+                <div class="card-img" style="background-image: url('./assets/images/birthday-cover.jpg');">
+                    <div class="card-overlay">
+                        <h3>Initiative 2</h3>
+                        <a href="link-to-page2.html" class="card-link">
+                            <ion-icon name="arrow-forward-outline" class="card-arrow"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+        - #Dual Slider Second
+      -->
+    <div class="dual-slider-second-section">
+        <div class="dual-slider-second-container">
+            <!-- Left Slider -->
+            <div class="dual-slider-first-wrapper" id="left-slider-second">
+                <div class="dual-slider-first-content">
+                    <img src="./assets/images/birthday-cover.jpg" class="slider-second-image active" alt="Slide 1">
+                    <img src="./assets/images/corporate-cover.jpg" class="slider-second-image" alt="Slide 2">
+                    <img src="./assets/images/catering-cover.JPG" class="slider-second-image" alt="Slide 3">
+                </div>
+            </div>
+
+            <!-- Right Slider -->
+            <div class="dual-slider-second-wrapper" id="right-slider-second">
+                <div class="dual-slider-second-content">
+                    <img src="./assets/images/birthday-cover.jpg" class="slider-second-image active" alt="Slide 1">
+                    <img src="./assets/images/corporate-cover.jpg" class="slider-second-image" alt="Slide 2">
+                    <img src="./assets/images/catering-cover.JPG" class="slider-second-image" alt="Slide 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+        - #Sponsors and partners
+      -->
+
+
+    <!-- 
+        - #ABOUT
+      -->
+    <section class="section about" id="about" aria-label="about">
+        <h1 class="section-heading">About Us</h1>
+        <div class="container">
+            <figure class="about-banner">
+                <img src="./assets/images/about-banner.png" width="802" height="654" loading="lazy" alt="about banner" class="w-100">
+            </figure>
+            <div class="about-content">
+                <h2 class="h2-sm section-title">We create some things, Design for your success future.</h2>
+                <p class="section-text">
+                    Lorem Ipsum is simply dumm of free available in market the way printing and typesetting industry has been the industrys standard dummy text ever.
+                </p>
+                <ul class="about-list">
+                    <li class="has-before">
+                        Price of additional materials or parts (if needed)
+                    </li>
+                    <li class="has-before">
+                        Transportation cost for carrying new materials/parts
+                    </li>
+                    <li class="has-before">
+                        You will get 100% money back offer.
+                    </li>
+                </ul>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary">Know More</a>
+                    <button class="flex-btn">
+                <div class="btn-icon">
+                  <ion-icon name="medal-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <span class="span">10+ Years Experience</span>
+              </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 
+    - #FOOTER
+  -->
+    <footer class="footer">
+        <div class="footer-top section">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">PuneCityMarathon</a>
+                    <p class="footer-text">
+                        Lorem ipsum dolor sit amet consecte tur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+                    </p>
+                    <form action="" class="newsletter-form">
+                        <input type="email" name="email_address" placeholder="Enter your email" required class="email-field">
+                        <button type="submit" class="form-btn">
+              <ion-icon name="paper-plane" aria-hidden="true"></ion-icon>
+            </button>
+                    </form>
+                </div>
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Our Services</p>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Strategy & Research</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Web Development</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Web Solution</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Digital Merketing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">App Design</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">App Development</a>
+                    </li>
+                </ul>
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Company</p>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">About Company</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Our Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Our Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Our Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Latest News</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Contact Us</p>
+                    </li>
+                    <li class="footer-item">
+                        <ion-icon name="location" aria-hidden="true"></ion-icon>
+                        <address class="contact-link address">
+              4517 Washington Ave. Manchester, Kentucky 39495
+            </address>
+                    </li>
+
+                    <li class="footer-item">
+                        <ion-icon name="call" aria-hidden="true"></ion-icon>
+
+                        <a href="tel:+7894631546876" class="contact-link">+7894631546876</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <ion-icon name="mail" aria-hidden="true"></ion-icon>
+
+                        <a href="mailto:info@hoolix.com" class="contact-link">info@punecitymarathon.com</a>
+                    </li>
+
+                    <li class="footer-item">
+                        <ul class="social-list">
+
+                            <li>
+                                <a href="#" class="social-link">
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="social-link">
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="social-link">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="social-link">
+                                    <ion-icon name="logo-pinterest"></ion-icon>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">
+                    &copy;2024 PuneCityMarathon | All Rights Reserved by <a href="#" class="copyright-link">PuneCityMarathon</a>
+                </p>
+                <ul class="footer-bottom-list">
+                    <li>
+                        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-bottom-link">Terms of Use</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- 
+    - custom js link
+  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const countdownStrip = document.getElementById("countdownStrip");
+            const countdownTimer = document.getElementById("countdownTimer");
+            const header = document.querySelector(".header");
+
+            // Event date - Update this to the desired event date
+            const eventDate = new Date("2025-01-19T00:00:00");
+
+            // Function to calculate the time left until the event
+            const calculateTimeLeft = () => {
+                const now = new Date();
+                const timeDifference = eventDate - now;
+
+                if (timeDifference <= 0) {
+                    countdownTimer.textContent = "Event Started!";
+                    return;
+                }
+
+                const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                countdownTimer.textContent = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+            };
+
+            // Initial calculation
+            calculateTimeLeft();
+
+            // Update countdown every second
+            setInterval(calculateTimeLeft, 1000);
+
+            // Function to hide the countdown strip on scroll and adjust header margin
+            const handleScroll = () => {
+                if (window.scrollY > 10) { // Adjust to hide on even slight scroll
+                    countdownStrip.style.transform = "translateY(-100%)"; // Hide strip on scroll
+                    header.classList.add('no-margin-top'); // Remove header margin-top
+                } else {
+                    countdownStrip.style.transform = "translateY(0)"; // Show strip when scrolled to top
+                    header.classList.remove('no-margin-top'); // Restore header margin-top
+                }
+            };
+
+            // Listen to the scroll event
+            window.addEventListener("scroll", handleScroll);
+        });
+
+        const slider = document.querySelector('.slider');
+        const nextBtn = document.querySelector('.next-btn');
+        const prevBtn = document.querySelector('.prev-btn');
+        const cards = document.querySelectorAll('.race-card');
+
+        let index = 0;
+
+        function showSlide(index) {
+            const cardWidth = cards[0].getBoundingClientRect().width + 20; // Add gap
+            slider.style.transform = `translateX(-${index * cardWidth}px)`;
+        }
+
+        // Next Button
+        nextBtn.addEventListener('click', () => {
+            index = (index + 1) % cards.length; // Loop back to the first card
+            showSlide(index);
+        });
+
+        // Previous Button
+        prevBtn.addEventListener('click', () => {
+            index = (index - 1 + cards.length) % cards.length; // Loop back to the last card
+            showSlide(index);
+        });
+
+        // First Dual Slider
+        document.addEventListener('DOMContentLoaded', function() {
+            let leftSliderIndex = 0;
+            let rightSliderIndex = 0;
+
+            // Ensure that these selectors are correctly targeting the slider images
+            const leftSlides = document.querySelectorAll('#left-slider-first .slider-first-image');
+            const rightSlides = document.querySelectorAll('#right-slider-first .slider-first-image');
+
+            // Function to update the slider based on the current index
+            function showSlide(slideIndex, slides) {
+                slides.forEach((slide) => {
+                    slide.classList.remove('active');
+                });
+
+                slideIndex = slideIndex % slides.length; // Loop back when reaching the last slide
+
+                slides[slideIndex].classList.add('active');
+            }
+
+            // Loop through the slides automatically
+            function autoSlide(slides, sliderIndex, interval) {
+                setInterval(() => {
+                    sliderIndex = (sliderIndex + 1) % slides.length;
+                    showSlide(sliderIndex, slides);
+                }, interval);
+            }
+
+            // Check if the slides exist and start the automatic transitions for both sliders
+            if (leftSlides.length > 0 && rightSlides.length > 0) {
+                autoSlide(leftSlides, leftSliderIndex, 6000);
+                autoSlide(rightSlides, rightSliderIndex, 4000);
+            } else {
+                console.error('Slider images are missing or not loaded');
+            }
+        });
+        // Add event listeners for cards (optional, if you want to track clicks)
+        document.querySelectorAll('.card').forEach((card) => {
+            card.addEventListener('click', () => {
+                window.location.href = card.querySelector('.card-link').getAttribute('href');
+            });
+        });
+
+        // Second Dual Slider
+        document.addEventListener('DOMContentLoaded', function() {
+            let leftSliderIndex = 0;
+            let rightSliderIndex = 0;
+
+            // Ensure that these selectors are correctly targeting the slider images
+            const leftSlides = document.querySelectorAll('#left-slider-second .slider-second-image');
+            const rightSlides = document.querySelectorAll('#right-slider-second .slider-second-image');
+
+            // Function to update the slider based on the current index
+            function showSlide(slideIndex, slides) {
+                slides.forEach((slide) => {
+                    slide.classList.remove('active');
+                });
+
+                slideIndex = slideIndex % slides.length; // Loop back when reaching the last slide
+
+                slides[slideIndex].classList.add('active');
+            }
+
+            // Loop through the slides automatically
+            function autoSlide(slides, sliderIndex, interval) {
+                setInterval(() => {
+                    sliderIndex = (sliderIndex + 1) % slides.length;
+                    showSlide(sliderIndex, slides);
+                }, interval);
+            }
+
+            // Check if the slides exist and start the automatic transitions for both sliders
+            if (leftSlides.length > 0 && rightSlides.length > 0) {
+                autoSlide(leftSlides, leftSliderIndex, 6000);
+                autoSlide(rightSlides, rightSliderIndex, 4000);
+            } else {
+                console.error('Slider images are missing or not loaded');
+            }
+        });
+        // Add event listeners for cards (optional, if you want to track clicks)
+        document.querySelectorAll('.card').forEach((card) => {
+            card.addEventListener('click', () => {
+                window.location.href = card.querySelector('.card-link').getAttribute('href');
+            });
+        });
+    </script>
+    <script src="./assets/js/script.js"></script>
+    <!-- 
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
