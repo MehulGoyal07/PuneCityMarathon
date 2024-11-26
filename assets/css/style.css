@@ -565,7 +565,7 @@ body {
 
 @media (max-width: 1024px) {
     .main-slider-section {
-        margin-top: 60px;
+        margin-top: 110px;
         /* Adjust for smaller screens */
     }
     .main-slider-slide {
@@ -576,7 +576,7 @@ body {
 
 @media (max-width: 768px) {
     .main-slider-section {
-        margin-top: 50px;
+        margin-top: 110px;
         /* Adjust for smaller screens */
     }
     .main-slider-slide {
@@ -587,7 +587,7 @@ body {
 
 @media (max-width: 480px) {
     .main-slider-section {
-        margin-top: 40px;
+        margin-top: 110px;
         /* Ensure proper margin for mobile */
     }
     .main-slider-slide {
