@@ -111,10 +111,27 @@
         </div>
     </header>
     <!-- 
+        - #Main Slider
+      -->
+    <section class="main-slider-section">
+        <div class="main-slider">
+            <div class="main-slider-wrapper">
+                <div class="main-slider-slide">
+                    <img src="assets/images/birthday-cover.jpg" alt="Image 1" class="main-slider-image">
+                </div>
+                <div class="main-slider-slide">
+                    <img src="assets/images/corporate-cover.jpg" alt="Image 2" class="main-slider-image">
+                </div>
+                <div class="main-slider-slide">
+                    <img src="assets/images/catering-cover.jpg" alt="Image 3" class="main-slider-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
         - #Event Overview
       -->
-
-    <!-- Event Overview Section -->
     <section class="event-overview">
         <!-- Heading -->
         <h2 class="event-heading">Event Overview</h2>
@@ -740,6 +757,23 @@
             partnersCurrentSlide = (partnersCurrentSlide + 1) % partnersSlides.length;
             showPartnersSlide(partnersCurrentSlide);
         }, 10000);
+
+        // Main Slider 
+        // JavaScript to make the slider work
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.main-slider-slide');
+            const sliderWrapper = document.querySelector('.main-slider-wrapper');
+            let currentSlide = 0;
+
+            // Function to move to the next slide
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length; // Loop back to the first slide
+                sliderWrapper.style.transform = `translateX(${-currentSlide * 100}%)`;
+            }
+
+            // Set interval to change the slide every 5 seconds
+            setInterval(nextSlide, 7000); // 5000ms = 5 seconds
+        });
     </script>
     <script src="./assets/js/script.js"></script>
     <!-- 
