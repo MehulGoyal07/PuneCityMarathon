@@ -110,6 +110,29 @@
             <div class="overlay" data-nav-toggler data-overlay></div>
         </div>
     </header>
+    <!-- 
+        - #Event Overview
+      -->
+
+    <!-- Event Overview Section -->
+    <section class="event-overview">
+        <!-- Heading -->
+        <h2 class="event-heading">Event Overview</h2>
+
+        <!-- Image -->
+        <div class="event-image">
+            <img src="assets/images/event-image.png" alt="Event Image">
+        </div>
+
+        <!-- Description Content Below Image -->
+        <div class="event-description">
+            <p>
+                Our event aims to bring together leaders, innovators, and enthusiasts from around the world. We focus on innovation, sustainability, and building strong communities. Expect insightful sessions, hands-on workshops, and opportunities to connect with like-minded
+                individuals.
+            </p>
+        </div>
+    </section>
+
 
     <!-- 
         - #Race Category
@@ -271,6 +294,7 @@
         </div>
     </div>
 
+
     <!-- 
         - #Dual Slider Second
       -->
@@ -299,6 +323,74 @@
     <!-- 
         - #Sponsors and partners
       -->
+
+    <!-- Sponsors and partners -->
+    <section class="partners-sponsors-section">
+        <h2 class="partners-sponsors-heading">Sponsors and Partners</h2>
+
+        <!-- Title and Joint Title Sponsors -->
+        <div class="partners-title-sponsors-container">
+            <div class="partners-sponsor-logo-box">
+                <img src="assets/logos/logo-1.jpg" alt="Title Sponsor" class="partners-sponsor-logo">
+                <h4>Title Sponsor</h4>
+            </div>
+            <div class="partners-sponsor-logo-box">
+                <img src="assets/logos/logo-1.jpg" alt="Joint Title Sponsor" class="partners-sponsor-logo">
+                <h4>Joint Title Sponsor</h4>
+            </div>
+        </div>
+
+        <!-- Separator Line -->
+        <div class="partners-separator"></div>
+
+        <!-- Associate Sponsor -->
+        <div class="partners-associate-sponsor-container">
+            <h3>Associate Sponsor</h3>
+            <div class="partners-sponsor-logo-box">
+                <img src="assets/logos/logo-1.jpg" alt="Associate Sponsor" class="partners-sponsor-logo">
+            </div>
+        </div>
+
+        <!-- Separator Line -->
+        <div class="partners-separator"></div>
+
+        <!-- Partners Section with Scrolling Logos -->
+        <div class="partners-partners-container">
+            <h3>Partners</h3>
+            <div class="partners-slider">
+                <div class="partners-slider-content">
+                    <!-- Set of logos for continuous scroll -->
+                    <div class="partners-partner-logo-box">
+                        <img src="assets/logos/logo-1.jpg" alt="Partner 1" class="partners-partner-logo">
+                    </div>
+                    <div class="partners-partner-logo-box">
+                        <img src="assets/logos/logo-1.jpg" alt="Partner 2" class="partners-partner-logo">
+                    </div>
+                    <div class="partners-partner-logo-box">
+                        <img src="assets/logos/logo-1.jpg" alt="Partner 3" class="partners-partner-logo">
+                    </div>
+                    <div class="partners-partner-logo-box">
+                        <img src="assets/logos/logo-1.jpg" alt="Partner 4" class="partners-partner-logo">
+                    </div>
+
+                    <!-- Duplicate logos for seamless scroll -->
+                    <div class="partners-partner-logo-box">
+                        <img src="assets/logos/logo-1.jpg" alt="Partner 1" class="partners-partner-logo">
+                    </div>
+                    <div class="partners-partner-logo-box">
+                        <img src="assets/logos/logo-1.jpg" alt="Partner 2" class="partners-partner-logo">
+                    </div>
+                    <div class="partners-partner-logo-box">
+                        <img src="assets/logos/logo-1.jpg" alt="Partner 3" class="partners-partner-logo">
+                    </div>
+                    <div class="partners-partner-logo-box">
+                        <img src="assets/logos/logo-1.jpg" alt="Partner 4" class="partners-partner-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
     <!-- 
@@ -632,6 +724,22 @@
                 window.location.href = card.querySelector('.card-link').getAttribute('href');
             });
         });
+
+        // Sponsors
+        const partnersSlides = document.querySelectorAll('.partners-slider-slide');
+        let partnersCurrentSlide = 0;
+
+        function showPartnersSlide(index) {
+            const partnersSlideWidth = partnersSlides[0].offsetWidth + 30; // 30 is the gap between slides
+            const partnersSliderWrapper = document.querySelector('.partners-slider-wrapper');
+            partnersSliderWrapper.style.transform = `translateX(${-index * partnersSlideWidth}px)`;
+        }
+
+        // Move to the next slide automatically every 10 seconds
+        let partnersSlideInterval = setInterval(() => {
+            partnersCurrentSlide = (partnersCurrentSlide + 1) % partnersSlides.length;
+            showPartnersSlide(partnersCurrentSlide);
+        }, 10000);
     </script>
     <script src="./assets/js/script.js"></script>
     <!-- 

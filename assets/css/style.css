@@ -519,6 +519,110 @@ body {
 
 
 /*-----------------------------------*\
+  #Event Overview
+\*-----------------------------------*/
+
+
+/* Event Overview Section */
+
+.event-overview {
+    padding: 40px 20px;
+    background-color: #ffff;
+    text-align: center;
+    margin-top: 80px;
+}
+
+
+/* Heading */
+
+.event-heading {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* Image Styling */
+
+.event-image {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    /* Center and add spacing below */
+}
+
+.event-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); */
+    transition: transform 0.3s ease-in-out;
+}
+
+.event-image img:hover {
+    transform: scale(1.03);
+}
+
+
+/* Description Content */
+
+.event-description {
+    max-width: 800px;
+    font-weight: 900;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+    text-align: left;
+}
+
+.event-description h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #FF8C00;
+    text-align: center;
+    /* Center the subheading */
+}
+
+.event-description p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .event-heading {
+        font-size: 2rem;
+    }
+    .event-description h3 {
+        font-size: 1.6rem;
+    }
+    .event-description p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-heading {
+        font-size: 1.8rem;
+    }
+    .event-description h3 {
+        font-size: 1.4rem;
+    }
+    .event-description p {
+        font-size: 1rem;
+    }
+}
+
+
+/*-----------------------------------*\
   #Race Category
 \*-----------------------------------*/
 
@@ -526,7 +630,7 @@ body {
 /* General Styles */
 
 .race-category {
-    margin-top: 70px;
+    /* margin-top: 70px; */
     padding: 20px;
 }
 
@@ -613,9 +717,10 @@ body {
 /* Slider Buttons */
 
 .slider-buttons {
-    position: absolute;
-    bottom: 30px;
-    right: 100px;
+    position: relative;
+    bottom: -40px;
+    align-items: center;
+    justify-content: center;
     display: flex;
     gap: 10px;
 }
@@ -640,7 +745,8 @@ body {
 
 @media (max-width: 768px) {
     .slider-buttons {
-        right: 40px;
+        align-items: center;
+        justify-content: center;
     }
     .race-card {
         flex: 0 0 100%;
@@ -804,9 +910,8 @@ body {
 .card {
     position: relative;
     flex: 0 0 calc(50% - 20px);
-    /* Two cards per row */
+    /* Two cards per row on larger screens */
     height: 350px;
-    /* Card height */
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
@@ -821,7 +926,6 @@ body {
     background-position: center;
     display: flex;
     align-items: flex-end;
-    /* Align content to the bottom */
 }
 
 
@@ -831,7 +935,6 @@ body {
     background: linear-gradient(45deg, #FFD700, #FFA500, #FF8C00);
     width: 100%;
     height: 40%;
-    /* Default height of 25% of the card */
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -841,7 +944,6 @@ body {
 
 .card:hover .card-overlay {
     height: 100%;
-    /* On hover, expand the gradient to cover the whole card */
 }
 
 
@@ -878,11 +980,8 @@ body {
 
 .card-link:hover .arrow {
     background: #FFD700;
-    /* Yellow background on hover */
     color: #000;
-    /* Dark arrow color */
     transform: translateX(5px);
-    /* Slight shift to the right */
 }
 
 
@@ -895,6 +994,41 @@ body {
     }
     .card {
         width: 100%;
+        height: auto;
+        /* Adjust height for better fit on smaller screens */
+    }
+    .card-img {
+        height: 250px;
+        /* Limit the height of the card image */
+    }
+    .card-overlay {
+        height: 40%;
+        /* Maintain the gradient height */
+    }
+    .card-overlay h3 {
+        font-size: 1.3rem;
+        /* Slightly smaller title font */
+    }
+}
+
+@media (max-width: 480px) {
+    .section-heading {
+        font-size: 2rem;
+    }
+    .section-subheading {
+        font-size: 1rem;
+    }
+    .card-img {
+        height: 200px;
+        /* Further reduce image height for small mobile screens */
+    }
+    .card-overlay h3 {
+        font-size: 1.2rem;
+        /* Smaller title font for mobile */
+    }
+    .card-link .arrow {
+        font-size: 1.5rem;
+        /* Smaller arrow icon for mobile */
     }
 }
 
@@ -1005,6 +1139,189 @@ body {
     .dual-slider-second-section {
         padding: 10px 5px;
         /* Reduce padding for very small screens */
+    }
+}
+
+
+/*-----------------------------------*\
+  #Sponsors
+\*-----------------------------------*/
+
+
+/* General Section Styling */
+
+.partners-sponsors-section {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.partners-sponsors-heading {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+
+/* Title and Joint Title Sponsors */
+
+.partners-title-sponsors-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.partners-sponsor-logo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    background: linear-gradient(45deg, #FFD700, #FFA500, #FF8C00);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.partners-sponsor-logo-box:hover {
+    transform: scale(1.05);
+}
+
+.partners-sponsor-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+/* Separator Line */
+
+.partners-separator {
+    width: 80%;
+    height: 2px;
+    background-color: #ddd;
+    margin: 50px auto;
+}
+
+
+/* Associate Sponsor */
+
+.partners-associate-sponsor-container {
+    margin: 40px 0;
+}
+
+.partners-associate-sponsor-container h3 {
+    font-size: 2rem;
+    color: #ff8c00;
+    margin-bottom: 20px;
+}
+
+.partners-associate-sponsor-container .partners-sponsor-logo-box {
+    width: 250px;
+    margin: 0 auto;
+}
+
+
+/* Partners Slider */
+
+.partners-partners-container {
+    margin-top: 40px;
+}
+
+.partners-partners-container h3 {
+    font-size: 2rem;
+    color: #ff8c00;
+    margin-bottom: 20px;
+}
+
+.partners-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.partners-slider-wrapper {
+    display: flex;
+    transition: transform 0.5s linear;
+}
+
+.partners-slider-content {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    animation: slide 20s linear infinite;
+}
+
+.partners-slider-slide {
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partners-partner-logo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.partners-partner-logo-box:hover {
+    transform: scale(1.05);
+}
+
+.partners-partner-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.partners-partner-logo-box p {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+/* Continuous slide animation */
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .partners-title-sponsors-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .partners-partner-logo-box {
+        width: 140px;
+    }
+    .partners-sponsor-logo-box {
+        width: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .partners-sponsor-logo-box,
+    .partners-partner-logo-box {
+        width: 140px;
+    }
+    .partners-sponsor-logo {
+        width: 100px;
     }
 }
 
