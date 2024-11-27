@@ -28,7 +28,39 @@
 
 <body>
     <!-- 
-    - #HEADER
+    - #Dialog Box
+  -->
+    <!-- Dialog Box HTML Structure -->
+    <div id="main-dialog-overlay" class="main-dialog-overlay">
+        <div class="main-dialog-box">
+            <!-- Close Button -->
+            <span class="main-dialog-close" id="main-dialog-close">&times;</span>
+
+            <!-- Dialog Content -->
+            <h2 class="main-dialog-heading">Congratulations!</h2>
+            <p class="main-dialog-text">We are excited to announce that the results for the <strong>2024 Pune City Marathon</strong> have been declared!</p>
+
+            <!-- Results Button -->
+            <a href="results-page.html" class="main-dialog-button">Go to Results</a>
+
+            <!-- Social Media Links -->
+            <p class="main-dialog-update-text">Stay updated on event news via:</p>
+            <div class="main-social-icons">
+                <a href="https://facebook.com" target="_blank">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    - #WhatsApp Button
   -->
     <a href="https://wa.me/+919527272609?text=Hello!%20I%20need%20help%20with%20your%20services" class="whatsapp-button" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon" />
@@ -136,7 +168,7 @@
         - #ABOUT
       -->
     <section class="section about" id="about" aria-label="about">
-        <h1 class="section-heading">About Us</h1>
+        <h1 class="main-heading">About Us</h1>
         <div class="container">
             <figure class="about-banner">
                 <img src="./assets/images/about-banner.png" width="802" height="654" loading="lazy" alt="about banner" class="w-100">
@@ -182,7 +214,7 @@
       -->
     <section class="event-overview">
         <!-- Heading -->
-        <h2 class="event-heading">Event Overview</h2>
+        <h2 class="main-heading">Event Overview</h2>
 
         <!-- Content Wrapper -->
         <div class="event-content">
@@ -225,7 +257,7 @@
         - #Race Category
       -->
     <div class="main-initiatives-section">
-        <h1 class="main-section-heading">Race Categories</h1>
+        <h1 class="main-heading">Race Categories</h1>
 
         <div class="main-initiatives-cards">
             <!-- First Card -->
@@ -312,7 +344,7 @@
       -->
     <section class="race-category">
         <div class="container">
-            <h1 class="section-heading">Our Initiatives</h1>
+            <h1 class="main-heading">Our Initiatives</h1>
             <div class="slider-wrapper">
                 <div class="slider">
                     <!-- Card 1 -->
@@ -413,7 +445,7 @@
 
     <!-- Sponsors and partners -->
     <section class="partners-sponsors-section">
-        <h2 class="partners-sponsors-heading">Sponsors and Partners</h2>
+        <h2 class="main-heading">Sponsors and Partners</h2>
 
         <!-- Title and Joint Title Sponsors -->
         <div class="partners-title-sponsors-container">
@@ -828,6 +860,21 @@
             partnersCurrentSlide = (partnersCurrentSlide + 1) % partnersSlides.length;
             showPartnersSlide(partnersCurrentSlide);
         }, 10000);
+
+        // Dialog Box
+        // JavaScript to handle the dialog box close button
+        window.onload = function() {
+            const dialogOverlay = document.getElementById('main-dialog-overlay');
+            const dialogClose = document.getElementById('main-dialog-close');
+
+            // Show the dialog box on page load
+            dialogOverlay.style.display = 'flex';
+
+            // Close the dialog box when clicking the close button
+            dialogClose.addEventListener('click', function() {
+                dialogOverlay.style.display = 'none';
+            });
+        };
     </script>
     <script src="./assets/js/script.js"></script>
     <!-- 
