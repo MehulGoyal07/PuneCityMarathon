@@ -169,10 +169,6 @@ body {
     padding-inline: 15px;
 }
 
-.section {
-    padding-block: var(--section-padding);
-}
-
 .has-before,
 .has-after {
     position: relative;
@@ -285,6 +281,37 @@ body {
     align-items: center;
     gap: 5px;
     transition: var(--transition-1);
+}
+
+
+/*-----------------------------------*\
+  #Whatsapp Button
+\*-----------------------------------*/
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
 }
 
 
@@ -633,7 +660,7 @@ body {
 .event-overview {
     padding: 40px 20px;
     background-color: #ffff;
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 
@@ -851,7 +878,8 @@ body {
 }
 
 .race-card-overlay {
-    background: linear-gradient(135deg, hsla(210, 120%, 20%, 1) 40%, hsla(210, 80%, 40%, 1) 60%, hsla(45, 100%, 50%, 1) 100%);
+    /* background: linear-gradient(135deg, hsla(210, 120%, 20%, 1) 40%, hsla(210, 80%, 40%, 1) 60%, hsla(45, 100%, 50%, 1) 100%); */
+    background: linear-gradient(135deg, hsla(210, 60%, 20%, 1) 60%, hsla(45, 100%, 50%, 1) 100%);
     width: 100%;
     height: 40%;
     padding: 15px;
@@ -1105,7 +1133,8 @@ body {
 /* Gradient Overlay at the Bottom of the Card */
 
 .main-card-overlay {
-    background: linear-gradient(45deg, #FFD700, #FFA500, #FF8C00);
+    /* background: linear-gradient(45deg, #FFD700, #FFA500, #FF8C00); */
+    background: linear-gradient(135deg, hsla(210, 60%, 20%, 1) 60%, hsla(45, 100%, 50%, 1) 100%);
     width: 100%;
     height: 40%;
     padding: 15px;
@@ -1350,7 +1379,8 @@ body {
     align-items: center;
     border-radius: 10px;
     padding: 20px;
-    background: linear-gradient(45deg, #FFD700, #FFA500, #FF8C00);
+    /* background: linear-gradient(45deg, #FFD700, #FFA500, #FF8C00); */
+    background: linear-gradient(135deg, hsla(210, 60%, 20%, 1) 60%, hsla(45, 100%, 50%, 1) 100%);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 }
@@ -1436,7 +1466,8 @@ body {
     flex-direction: column;
     align-items: center;
     width: 180px;
-    background: linear-gradient(45deg, #FFD700, #FFA500);
+    /* background: linear-gradient(45deg, #FFD700, #FFA500); */
+    background: linear-gradient(135deg, hsla(210, 60%, 20%, 1) 60%, hsla(45, 100%, 50%, 1) 100%);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -1501,9 +1532,136 @@ body {
   #FOOTER
 \*-----------------------------------*/
 
+.main-collage-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, hsla(210, 60%, 20%, 1) 60%, hsla(45, 100%, 50%, 1) 100%);
+    color: #fff;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+
+/* Left Text Section */
+
+.main-collage-text {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+}
+
+.main-collage-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.main-collage-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+
+/* Right Collage Section */
+
+.main-collage-images {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-collage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 150px);
+    gap: 10px;
+    width: 350px;
+    height: 450px;
+    position: relative;
+}
+
+
+/* Collage Items: Images */
+
+.main-collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.main-collage-item img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Collage Items: Colored Boxes */
+
+.color-box-1 {
+    background-color: hsla(45, 100%, 50%, 0.8);
+    border-radius: 8px;
+}
+
+.color-box-2 {
+    background-color: hsla(210, 60%, 40%, 0.8);
+    border-radius: 8px;
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 1024px) {
+    .main-collage-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .main-collage-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-collage-heading {
+        font-size: 2.5rem;
+    }
+    .main-collage-paragraph {
+        font-size: 1.1rem;
+    }
+    .main-collage-grid {
+        grid-template-rows: repeat(3, 100px);
+        width: 300px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-collage-heading {
+        font-size: 2rem;
+    }
+    .main-collage-paragraph {
+        font-size: 1rem;
+    }
+    .main-collage-grid {
+        grid-template-rows: repeat(3, 80px);
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/*-----------------------------------*\
+  #FOOTER
+\*-----------------------------------*/
+
 .footer {
     background-color: var(--rich-black-fogra-29-2);
     color: var(--cultured);
+    padding: 30px;
 }
 
 .footer-top .container {
@@ -1611,6 +1769,8 @@ body {
 .footer-bottom {
     padding-block: 15px;
     border-block-start: 1px solid var(--jet);
+    align-items: center;
+    justify-content: center;
 }
 
 .copyright {
