@@ -519,81 +519,110 @@ body {
 
 
 /*-----------------------------------*\
-  #Main Slider
+  #Main Video
 \*-----------------------------------*/
 
 
-/* Main Slider Section */
+/* Main Video Section */
 
-.main-slider-section {
+.main-video-section {
     width: 100%;
-    margin-top: 120px;
-    /* Adjust this margin based on your header height */
+    margin-top: 80px;
+    /* Adjust this margin to fit below your header */
+    position: relative;
     overflow: hidden;
-    position: relative;
 }
 
-.main-slider {
-    display: flex;
+
+/* Video Styling */
+
+.main-video {
     width: 100%;
-    position: relative;
-}
-
-.main-slider-wrapper {
-    display: flex;
-    transition: transform 1s ease-in-out;
-}
-
-.main-slider-slide {
-    flex: 0 0 100%;
-    /* Ensures the image takes 100% width */
-    height: 500px;
-    /* Adjust based on your image size */
-    position: relative;
-}
-
-.main-slider-image {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
-    display: block;
-    /* Ensures no extra space below the image */
 }
 
 
 /* Responsive Design */
 
 @media (max-width: 1024px) {
-    .main-slider-section {
-        margin-top: 110px;
-        /* Adjust for smaller screens */
-    }
-    .main-slider-slide {
-        height: 400px;
-        /* Reduce height for tablets */
+    .main-video-section {
+        margin-top: 90px;
     }
 }
 
 @media (max-width: 768px) {
-    .main-slider-section {
-        margin-top: 110px;
-        /* Adjust for smaller screens */
-    }
-    .main-slider-slide {
-        height: 300px;
-        /* Further reduce height for mobile screens */
+    .main-video-section {
+        margin-top: 90px;
     }
 }
 
 @media (max-width: 480px) {
-    .main-slider-section {
-        margin-top: 110px;
-        /* Ensure proper margin for mobile */
+    .main-video-section {
+        margin-top: 90px;
     }
-    .main-slider-slide {
-        height: 250px;
-        /* Adjust height for very small screens */
-    }
+}
+
+
+/*-----------------------------------*\
+  #ABOUT
+\*-----------------------------------*/
+
+.about .container {
+    display: grid;
+    gap: 30px;
+}
+
+.about-banner {
+    filter: drop-shadow(2px 2px 5px hsla(0, 0%, 0%, 0.08));
+}
+
+.about .section-text {
+    margin-block: 20px 13px;
+}
+
+.about-list {
+    margin-block-end: 50px;
+}
+
+.about-list .has-before {
+    font-family: var(--ff-cuprum);
+    font-size: var(--fs-8);
+    font-weight: var(--fw-600);
+    padding-inline-start: 20px;
+    line-height: 1.5;
+}
+
+.about-list .has-before:not(:last-child) {
+    margin-block-end: 15px;
+}
+
+.about-list .has-before::before {
+    top: 10px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--go-green);
+}
+
+.about .btn-group {
+    justify-content: flex-start;
+}
+
+.about .btn-group .flex-btn {
+    gap: 10px;
+}
+
+.about .btn-icon ion-icon {
+    color: var(--go-green);
+    font-size: 40px;
+}
+
+.about .btn-group .span {
+    color: var(--go-green);
+    font-family: var(--ff-cuprum);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-600);
 }
 
 
@@ -601,13 +630,9 @@ body {
   #Event Overview
 \*-----------------------------------*/
 
-
-/* Event Overview Section */
-
 .event-overview {
     padding: 40px 20px;
     background-color: #ffff;
-    text-align: center;
     margin-top: 80px;
 }
 
@@ -616,87 +641,156 @@ body {
 
 .event-heading {
     font-size: 4rem;
+    /* Increased size */
     font-weight: bold;
     color: #333;
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 
-/* Image Styling */
+/* Content Wrapper */
 
-.event-image {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto 40px;
-    /* Center and add spacing below */
+.event-content {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.event-image img {
-    width: 100%;
-    height: auto;
+
+/* Background Image Styling */
+
+.event-background {
+    position: relative;
+    background-image: url('../images/about-banner.png');
+    background-size: cover;
+    background-position: center;
     border-radius: 15px;
-    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); */
-    transition: transform 0.3s ease-in-out;
-}
-
-.event-image img:hover {
-    transform: scale(1.03);
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 60px 20px;
 }
 
 
-/* Description Content */
+/* Overlay Effect for the Background */
+
+.event-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 15px;
+}
+
+
+/* Event Description Content */
 
 .event-description {
+    position: relative;
+    z-index: 2;
+    color: #fff;
     max-width: 800px;
-    font-weight: 900;
     margin: 0 auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
     text-align: left;
 }
 
+.event-description ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .event-description h3 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
+    /* Increased size */
+    color: #ff8c00;
     margin-bottom: 15px;
-    color: #FF8C00;
-    text-align: center;
-    /* Center the subheading */
+    /* Added more space for better readability */
 }
 
 .event-description p {
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 1.5rem;
+    /* Increased size */
+    color: #fff;
+    line-height: 1.8;
+}
+
+.event-description ul ul {
+    list-style: disc;
+    margin-left: 30px;
+}
+
+.event-description ul ul li {
+    font-size: 1.3rem;
+    /* Increased size */
+    color: #fff;
+    margin-left: 20px;
     line-height: 1.6;
 }
 
 
 /* Responsive Design */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .event-heading {
-        font-size: 2rem;
+        font-size: 3.5rem;
+        /* Adjusted size for tablets */
     }
     .event-description h3 {
-        font-size: 1.6rem;
+        font-size: 2rem;
+        /* Adjusted size for tablets */
     }
     .event-description p {
+        font-size: 1.3rem;
+        /* Adjusted size for tablets */
+    }
+    .event-description ul ul li {
+        font-size: 1.2rem;
+        /* Adjusted size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .event-heading {
+        font-size: 3rem;
+        /* Adjusted size for small tablets */
+    }
+    .event-description h3 {
+        font-size: 1.8rem;
+        /* Adjusted size for small tablets */
+    }
+    .event-description p {
+        font-size: 1.2rem;
+        /* Adjusted size for small tablets */
+    }
+    .event-description ul ul li {
         font-size: 1.1rem;
+        /* Adjusted size for small tablets */
     }
 }
 
 @media (max-width: 480px) {
     .event-heading {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
+        /* Adjusted size for mobile */
     }
     .event-description h3 {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+        /* Adjusted size for mobile */
     }
     .event-description p {
+        font-size: 1.1rem;
+        /* Adjusted size for mobile */
+    }
+    .event-description ul ul li {
         font-size: 1rem;
+        /* Adjusted size for mobile */
     }
 }
 
@@ -954,20 +1048,20 @@ body {
 
 /* Initiatives Section */
 
-.initiatives-section {
+.main-initiatives-section {
     padding: 50px 20px;
     background-color: #fff;
     text-align: center;
 }
 
-.section-heading {
+.main-section-heading {
     font-size: 2.5rem;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
 }
 
-.section-subheading {
+.main-section-subheading {
     font-size: 1.1rem;
     color: #777;
     margin-bottom: 40px;
@@ -976,7 +1070,7 @@ body {
 
 /* Container for Cards */
 
-.initiatives-cards {
+.main-initiatives-cards {
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -986,10 +1080,10 @@ body {
 
 /* Card Styling */
 
-.card {
+.main-card {
     position: relative;
-    flex: 0 0 calc(50% - 20px);
-    /* Two cards per row on larger screens */
+    flex: 0 0 calc(25% - 20px);
+    /* Four cards per row */
     height: 350px;
     border-radius: 10px;
     overflow: hidden;
@@ -998,7 +1092,7 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-.card-img {
+.main-card-img {
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -1010,7 +1104,7 @@ body {
 
 /* Gradient Overlay at the Bottom of the Card */
 
-.card-overlay {
+.main-card-overlay {
     background: linear-gradient(45deg, #FFD700, #FFA500, #FF8C00);
     width: 100%;
     height: 40%;
@@ -1021,14 +1115,14 @@ body {
     transition: height 0.3s ease-in-out;
 }
 
-.card:hover .card-overlay {
+.main-card:hover .main-card-overlay {
     height: 100%;
 }
 
 
 /* Title Styling */
 
-.card-overlay h3 {
+.main-card-overlay h3 {
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
@@ -1038,7 +1132,7 @@ body {
 
 /* Arrow Icon */
 
-.card-link {
+.main-card-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1048,7 +1142,7 @@ body {
     font-size: 16px;
 }
 
-.card-link .arrow {
+.main-card-link .main-arrow {
     font-size: 2rem;
     color: #fff;
     background: rgba(0, 0, 0, 0.5);
@@ -1057,7 +1151,7 @@ body {
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.card-link:hover .arrow {
+.main-card-link:hover .main-arrow {
     background: #FFD700;
     color: #000;
     transform: translateX(5px);
@@ -1066,48 +1160,46 @@ body {
 
 /* Responsive Adjustments */
 
+@media (max-width: 1024px) {
+    .main-card {
+        flex: 0 0 calc(50% - 20px);
+        /* Two cards per row */
+        height: 300px;
+    }
+}
+
 @media (max-width: 768px) {
-    .initiatives-cards {
+    .main-initiatives-cards {
         flex-direction: column;
         gap: 20px;
     }
-    .card {
-        width: 100%;
-        height: auto;
-        /* Adjust height for better fit on smaller screens */
+    .main-card {
+        flex: 0 0 100%;
+        height: 300px;
     }
-    .card-img {
+    .main-card-img {
         height: 250px;
-        /* Limit the height of the card image */
     }
-    .card-overlay {
+    .main-card-overlay {
         height: 40%;
-        /* Maintain the gradient height */
-    }
-    .card-overlay h3 {
-        font-size: 1.3rem;
-        /* Slightly smaller title font */
     }
 }
 
 @media (max-width: 480px) {
-    .section-heading {
+    .main-section-heading {
         font-size: 2rem;
     }
-    .section-subheading {
+    .main-section-subheading {
         font-size: 1rem;
     }
-    .card-img {
+    .main-card-img {
         height: 200px;
-        /* Further reduce image height for small mobile screens */
     }
-    .card-overlay h3 {
+    .main-card-overlay h3 {
         font-size: 1.2rem;
-        /* Smaller title font for mobile */
     }
-    .card-link .arrow {
+    .main-card-link .main-arrow {
         font-size: 1.5rem;
-        /* Smaller arrow icon for mobile */
     }
 }
 
@@ -1231,7 +1323,7 @@ body {
 
 .partners-sponsors-section {
     padding: 80px 20px;
-    background-color: #f4f4f4;
+    background-color: #ffff;
     text-align: center;
 }
 
@@ -1402,69 +1494,6 @@ body {
     .partners-sponsor-logo {
         width: 100px;
     }
-}
-
-
-/*-----------------------------------*\
-  #ABOUT
-\*-----------------------------------*/
-
-.about .container {
-    display: grid;
-    gap: 30px;
-}
-
-.about-banner {
-    filter: drop-shadow(2px 2px 5px hsla(0, 0%, 0%, 0.08));
-}
-
-.about .section-text {
-    margin-block: 20px 13px;
-}
-
-.about-list {
-    margin-block-end: 50px;
-}
-
-.about-list .has-before {
-    font-family: var(--ff-cuprum);
-    font-size: var(--fs-8);
-    font-weight: var(--fw-600);
-    padding-inline-start: 20px;
-    line-height: 1.5;
-}
-
-.about-list .has-before:not(:last-child) {
-    margin-block-end: 15px;
-}
-
-.about-list .has-before::before {
-    top: 10px;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--go-green);
-}
-
-.about .btn-group {
-    justify-content: flex-start;
-}
-
-.about .btn-group .flex-btn {
-    gap: 10px;
-}
-
-.about .btn-icon ion-icon {
-    color: var(--go-green);
-    font-size: 40px;
-}
-
-.about .btn-group .span {
-    color: var(--go-green);
-    font-family: var(--ff-cuprum);
-    font-size: var(--fs-6);
-    font-weight: var(--fw-600);
 }
 
 
