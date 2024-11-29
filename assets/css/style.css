@@ -1919,7 +1919,7 @@ body {
 }
 
 .footer-link:hover {
-    color: #000;
+    color: var(--go-green);
     /* Darker hover effect */
 }
 
@@ -1952,7 +1952,7 @@ body {
 }
 
 .form-btn:hover {
-    background-color: #555;
+    background-color: var(--go-green);
     /* Slightly lighter button on hover */
 }
 
