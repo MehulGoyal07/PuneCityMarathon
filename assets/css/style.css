@@ -625,6 +625,17 @@ body {
     line-height: 1;
 }
 
+.logo-image {
+    height: 60px;
+    /* Optimal height for desktops */
+    width: auto;
+    /* Keep width auto to maintain aspect ratio */
+    max-width: auto;
+    /* Maximum width to prevent the logo from getting too large */
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
 .nav-open-btn {
     color: var(--rich-black-fogra-29-1);
     font-size: 35px;
