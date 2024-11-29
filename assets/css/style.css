@@ -1738,7 +1738,7 @@ body {
 
 
 /*-----------------------------------*\
-  #FOOTER
+  #Collage Section
 \*-----------------------------------*/
 
 .main-collage-section {
@@ -1868,9 +1868,9 @@ body {
 \*-----------------------------------*/
 
 .footer {
+    padding: 20px;
     background-color: var(--rich-black-fogra-29-2);
     color: var(--cultured);
-    padding: 30px;
 }
 
 .footer-top .container {
@@ -1978,8 +1978,6 @@ body {
 .footer-bottom {
     padding-block: 15px;
     border-block-start: 1px solid var(--jet);
-    align-items: center;
-    justify-content: center;
 }
 
 .copyright {
