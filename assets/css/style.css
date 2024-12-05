@@ -357,6 +357,59 @@ body {
 
 
 /*-----------------------------------*\
+  #Registration Button
+\*-----------------------------------*/
+
+
+/* Fixed Registration Button */
+
+.fixed-register-btn {
+    position: fixed;
+    bottom: 20px;
+    /* Distance from the bottom */
+    left: 50%;
+    /* Center it horizontally */
+    transform: translateX(-50%);
+    /* Adjust the centering */
+    background-color: var(--go-green);
+    color: var(--white);
+    font-weight: var(--fw-600);
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border-radius: var(--radius-5);
+    max-width: max-content;
+    transition: var(--transition-1);
+    z-index: 1000;
+}
+
+
+/* Hover effect */
+
+.fixed-register-btn:hover {
+    background-color: var(--rich-black-fogra-29-1);
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .fixed-register-btn {
+        font-size: 1rem;
+        /* Slightly smaller text */
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fixed-register-btn {
+        font-size: 0.9rem;
+        /* Smaller text for mobile */
+        padding: 10px 20px;
+    }
+}
+
+
+/*-----------------------------------*\
   #Dialog Box
 \*-----------------------------------*/
 
@@ -763,7 +816,7 @@ body {
 
 .main-video-section {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 130px;
     /* Adjust this margin to fit below your header */
     position: relative;
     overflow: hidden;
@@ -782,19 +835,19 @@ body {
 
 @media (max-width: 1024px) {
     .main-video-section {
-        margin-top: 90px;
+        margin-top: 130px;
     }
 }
 
 @media (max-width: 768px) {
     .main-video-section {
-        margin-top: 90px;
+        margin-top: 130px;
     }
 }
 
 @media (max-width: 480px) {
     .main-video-section {
-        margin-top: 90px;
+        margin-top: 130px;
     }
 }
 
@@ -945,7 +998,7 @@ body {
 .event-description h3 {
     font-size: 2.5rem;
     /* Increased size */
-    color: #ff8c00;
+    color: var(--go-green);
     margin-bottom: 15px;
     /* Added more space for better readability */
 }
@@ -1957,7 +2010,7 @@ body {
 }
 
 .footer-bottom {
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
     border-top: 1px solid #ccc;
     /* Light border at the top */

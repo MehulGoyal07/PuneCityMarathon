@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuneCityMarathon</title>
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="../css/pages.css">
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+</head>
+
+<body>
+    <!-- 
+    - #WhatsApp Button
+  -->
+    <a href="https://wa.me/+919527272609?text=Hello!%20I%20need%20help%20with%20your%20services" class="whatsapp-button" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon" />
+    </a>
+
+    <!-- 
+    - #Registration Button
+  -->
+    <a href="#register" class="fixed-register-btn">Register Now</a>
+
+    <!-- 
+    - #Countdown Strip
+  -->
+    <div class="countdown-strip" id="countdownStrip">
+        <div class="countdown-content">
+            <span class="event-info">Pune City Marathon | 19th January 2025 |</span>
+            <span class="countdown-timer" id="countdownTimer"></span>
+        </div>
+    </div>
+
+    <!-- 
+    - #HEADER
+  -->
+    <header class="header" data-header>
+        <div class="container">
+            <!-- <a href="index.html" class="logo">PuneCityMarathon</a> -->
+            <a href="../../index.html" class="logo">
+                <img src="../logos/PCM2025_logo_new.png" alt="pcm_logo" class="logo-image">
+            </a>
+            <nav class="navbar" data-navbar>
+                <div class="wrapper">
+                    <a href="#" class="logo">PCM2025</a>
+                    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            </button>
+                </div>
+                <ul class="navbar-list">
+                    <li class="dropdown">
+                        <a href="../../index.html" class="navbar-link" data-nav-link>About PCM
+                    <ion-icon name="chevron-down-outline" class="mobile-arrow"></ion-icon>
+                </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="overview.html">Overview</a></li>
+                            <li><a href="aboutUs.html">About Us</a></li>
+                            <li><a href="endorsedBy.html">Endorsed By</a></li>
+                            <li><a href="newsMedia.html">News / Media</a></li>
+                            <li><a href="route.html">Route</a></li>
+                            <li><a href="deliverables.html">Deliverables</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" class="navbar-link" data-nav-link>Race Categories
+                    <ion-icon name="chevron-down-outline" class="mobile-arrow"></ion-icon>
+                </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../RaceCategories/3KMFamilyRun.html">3KM - Family Run</a></li>
+                            <li><a href="../RaceCategories/5KMFunRun.html">5Km - Fun Run</a></li>
+                            <li><a href="../RaceCategories/10KMEmpowerRun.html">10Km - Empower Run</a></li>
+                            <li><a href="../RaceCategories/21KMLegendsRun.html">21Km (Half Marathon) - Legends Run</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="navbar-link" data-nav-link>Philanthropy
+                    <ion-icon name="chevron-down-outline" class="mobile-arrow"></ion-icon>
+                </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../Philanthropy/ourMission.html">Our Mission</a></li>
+                            <li><a href="../Philanthropy/successStory.html">Sucees Story</a></li>
+                            <li><a href="../Philanthropy/edition1stDonation.html">Edition 1st Donation</a></li>
+                            <li><a href="../Philanthropy/ngoDonated.html">NGO Donated</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="navbar-link" data-nav-link>Results
+                    <ion-icon name="chevron-down-outline" class="mobile-arrow"></ion-icon>
+                </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://tinyurl.com/536mebbw">Result 2024</a></li>
+                            <li><a href="https://eventforce.ai/login?event_name=pune-city-marathon-2024&campaign_name=pune-city-marathon-2024_1709440184">Photo 2024</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="navbar-link" data-nav-link>Marathon Influence 
+                    <ion-icon name="chevron-down-outline" class="mobile-arrow"></ion-icon>
+                </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../marathoInfluence/aboutMentor.html">About Mentor</a></li>
+                            <li><a href="../marathoInfluence/aboutRaceDirector.html">About Race Director</a></li>
+                            <li><a href="../marathoInfluence/ambassador.html">Ambassador</a></li>
+                            <li><a href="../marathoInfluence/pacer.html">Pacer</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+    </button>
+            <a href="#" class="btn-outline">Register Now</a>
+            <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+    </header>
+
+
+    <!-- 
+    - #Routes Section
+  -->
+    <h2 class="main-heading">Route</h2>
+    <section class="routes-announcement-section">
+        <div class="announcement-container">
+            <p>To be announced soon...</p>
+        </div>
+    </section>
+
+    <!-- 
+    - #FOOTER
+  -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <!-- First container: Logo, text, email, contact -->
+                <div class="footer-column">
+                    <a href="../../index.html" class="logo">
+                        <img src="../logos/PCM2025_logo_new.png" alt="PuneCityMarathon" class="footer-logo">
+                    </a>
+                    <p class="footer-text">Lorem ipsum dolor sit amet consecte tur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    <p>Email: <a href="mailto:info@punecitymarathon.com" class="contact-link">info@punecitymarathon.com</a></p>
+                    <p>Contact: <a href="tel:+7894631546876" class="contact-link">+7894631546876</a></p>
+                </div>
+
+                <!-- Second container: Know More -->
+                <div class="footer-column">
+                    <h3 class="footer-heading">Know More</h3>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Event Details</a></li>
+                        <li><a href="#" class="footer-link">Route Details</a></li>
+                        <li><a href="#" class="footer-link">Sponsors</a></li>
+                        <li><a href="#" class="footer-link">Venue</a></li>
+                        <li><a href="#" class="footer-link">Key Events</a></li>
+                        <li><a href="#" class="footer-link">Philanthropy Cause</a></li>
+                    </ul>
+                </div>
+
+                <!-- Third container: Important Links -->
+                <div class="footer-column">
+                    <h3 class="footer-heading">Important Links</h3>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">About</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                        <li><a href="#" class="footer-link">Register/Login</a></li>
+                        <li><a href="#" class="footer-link">Book Ticket</a></li>
+                        <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Fourth container: Subscribe to Newsletter -->
+                <div class="footer-column">
+                    <h3 class="footer-heading">Subscribe to Newsletter</h3>
+                    <form action="#" class="newsletter-form">
+                        <input type="email" name="email_address" placeholder="Enter your email" required class="email-field">
+                        <button type="submit" class="form-btn">
+                        <ion-icon name="paper-plane"></ion-icon>
+                    </button>
+                    </form>
+                    <p>Stay updated on our latest events!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">&copy;2024 PuneCityMarathon | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 
+    - custom js link
+  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const countdownStrip = document.getElementById("countdownStrip");
+            const countdownTimer = document.getElementById("countdownTimer");
+            const header = document.querySelector(".header");
+
+            // Event date - Update this to the desired event date
+            const eventDate = new Date("2025-02-02T05:00:00");
+
+            // Function to calculate the time left until the event
+            const calculateTimeLeft = () => {
+                const now = new Date();
+                const timeDifference = eventDate - now;
+
+                if (timeDifference <= 0) {
+                    countdownTimer.textContent = "Event Started!";
+                    return;
+                }
+
+                const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                countdownTimer.textContent = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+            };
+
+            // Initial calculation
+            calculateTimeLeft();
+
+            // Update countdown every second
+            setInterval(calculateTimeLeft, 1000);
+
+            // Function to hide the countdown strip on scroll and adjust header margin
+            const handleScroll = () => {
+                if (window.scrollY > 10) { // Adjust to hide on even slight scroll
+                    countdownStrip.style.transform = "translateY(-100%)"; // Hide strip on scroll
+                    header.classList.add('no-margin-top'); // Remove header margin-top
+                } else {
+                    countdownStrip.style.transform = "translateY(0)"; // Show strip when scrolled to top
+                    header.classList.remove('no-margin-top'); // Restore header margin-top
+                }
+            };
+
+            // Listen to the scroll event
+            window.addEventListener("scroll", handleScroll);
+        });
+    </script>
+    <script src="../../assets/js/script.js"></script>
+    <!-- 
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
