@@ -862,7 +862,26 @@ body {
 }
 
 .about-banner {
-    filter: drop-shadow(2px 2px 5px hsla(0, 0%, 0%, 0.08));
+    border: 8px solid rgba(255, 255, 255, 0.8);
+    /* Adds a subtle white border */
+    border-radius: 20px;
+    /* Rounded corners for a modern look */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    /* Adds a soft shadow */
+    filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.1));
+    /* Subtle outer shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effect */
+}
+
+
+/* Hover Effect */
+
+.about-banner:hover {
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    /* More prominent shadow on hover */
 }
 
 .about .section-text {
@@ -953,13 +972,17 @@ body {
 
 .event-background {
     position: relative;
-    background-image: url('../images/about-banner.png');
+    background-image: url('../images/eventOverview/event-overview.JPG');
     background-size: cover;
     background-position: center;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     padding: 60px 20px;
+    color: white;
+    /* Ensures the text stands out */
+    text-align: center;
+    /* Center text for a modern look */
 }
 
 
@@ -996,7 +1019,7 @@ body {
 }
 
 .event-description h3 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     /* Increased size */
     color: var(--go-green);
     margin-bottom: 15px;
@@ -1004,7 +1027,7 @@ body {
 }
 
 .event-description p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     /* Increased size */
     color: #fff;
     line-height: 1.8;
@@ -1016,7 +1039,7 @@ body {
 }
 
 .event-description ul ul li {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     /* Increased size */
     color: #fff;
     margin-left: 20px;
