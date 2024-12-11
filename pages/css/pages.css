@@ -893,7 +893,7 @@ body {
 }
 
 .content-list {
-    list-style-type: circle;
+    list-style: decimal;
     padding-left: 20px;
     margin-bottom: 20px;
 }
