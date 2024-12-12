@@ -1643,17 +1643,27 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
-    max-width: 250px;
-    margin: 0 auto;
 }
 
 .partners-sponsor-logo {
-    width: 180px;
-    /* Fixed width */
-    height: 100px;
-    /* Fixed height */
     object-fit: contain;
-    /* Ensures the image scales correctly within the box */
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Larger Logo for Conceptualized By */
+
+.conceptualized-logo {
+    width: 350px;
+    height: 230px;
+}
+
+
+/* Smaller Logos for Executed By and Managed By */
+
+.smaller-logo {
+    width: 180px;
+    height: 120px;
 }
 
 .partners-sponsor-box h4 {
@@ -1663,20 +1673,16 @@ body {
 }
 
 .center-box {
-    margin-bottom: 40px;
-    /* Extra space for first row */
+    margin-bottom: 60px;
+    /* Extra space for the first row */
 }
 
 .partners-executed-managed-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 100px;
     flex-wrap: wrap;
-}
-
-.partners-executed-managed-container .partners-sponsor-box {
-    max-width: 200px;
-    margin: 0 auto;
+    padding-top: 20px;
 }
 
 
@@ -1684,7 +1690,6 @@ body {
 
 .partners-sponsor-box:hover {
     transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
 }
 
 
@@ -1697,6 +1702,15 @@ body {
     }
     .partners-sponsor-box {
         max-width: 100%;
+    }
+    /* Adjusted sizes for mobile */
+    .conceptualized-logo {
+        width: 300px;
+        height: 150px;
+    }
+    .smaller-logo {
+        width: 150px;
+        height: 90px;
     }
 }
 
