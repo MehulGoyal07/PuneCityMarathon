@@ -1632,10 +1632,87 @@ body {
   #Sponsors
 \*-----------------------------------*/
 
-
-/* General Section Styling */
-
 .partners-sponsors-section {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.partners-sponsor-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.partners-sponsor-logo {
+    width: 180px;
+    /* Fixed width */
+    height: 100px;
+    /* Fixed height */
+    object-fit: contain;
+    /* Ensures the image scales correctly within the box */
+}
+
+.partners-sponsor-box h4 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.center-box {
+    margin-bottom: 40px;
+    /* Extra space for first row */
+}
+
+.partners-executed-managed-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.partners-executed-managed-container .partners-sponsor-box {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+
+/* Hover Effect */
+
+.partners-sponsor-box:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .partners-executed-managed-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .partners-sponsor-box {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .partners-executed-managed-container {
+        flex-direction: row;
+    }
+}
+
+
+/*-----------------------------------*\
+  #Sponsors
+\*-----------------------------------*/
+
+
+/* .partners-sponsors-section {
     padding: 80px 20px;
     background-color: #ffff;
     text-align: center;
@@ -1646,9 +1723,6 @@ body {
     margin-bottom: 50px;
     color: #333;
 }
-
-
-/* Title and Joint Title Sponsors */
 
 .partners-title-sponsors-container {
     display: flex;
@@ -1664,7 +1738,6 @@ body {
     align-items: center;
     border-radius: 10px;
     padding: 20px;
-    /* background: linear-gradient(45deg, #FFD700, #FFA500, #FF8C00); */
     background: linear-gradient(135deg, hsla(210, 60%, 20%, 1) 60%, hsla(45, 100%, 50%, 1) 100%);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
@@ -1680,18 +1753,12 @@ body {
     margin-bottom: 10px;
 }
 
-
-/* Separator Line */
-
 .partners-separator {
     width: 80%;
     height: 2px;
     background-color: #ddd;
     margin: 50px auto;
 }
-
-
-/* Associate Sponsor */
 
 .partners-associate-sponsor-container {
     margin: 40px 0;
@@ -1707,9 +1774,6 @@ body {
     width: 250px;
     margin: 0 auto;
 }
-
-
-/* Partners Slider */
 
 .partners-partners-container {
     margin-top: 40px;
@@ -1751,7 +1815,6 @@ body {
     flex-direction: column;
     align-items: center;
     width: 180px;
-    /* background: linear-gradient(45deg, #FFD700, #FFA500); */
     background: linear-gradient(135deg, hsla(210, 60%, 20%, 1) 60%, hsla(45, 100%, 50%, 1) 100%);
     border-radius: 10px;
     padding: 20px;
@@ -1774,9 +1837,6 @@ body {
     color: #333;
 }
 
-
-/* Continuous slide animation */
-
 @keyframes slide {
     0% {
         transform: translateX(0);
@@ -1785,9 +1845,6 @@ body {
         transform: translateX(-100%);
     }
 }
-
-
-/* Responsive Design */
 
 @media (max-width: 768px) {
     .partners-title-sponsors-container {
@@ -1811,6 +1868,7 @@ body {
         width: 100px;
     }
 }
+ */
 
 
 /*-----------------------------------*\
@@ -1818,13 +1876,13 @@ body {
 \*-----------------------------------*/
 
 .main-collage-section {
+    background: linear-gradient(135deg, hsla(210, 60%, 20%, 1) 60%, hsla(45, 100%, 50%, 1) 100%);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding: 50px 20px;
-    background: linear-gradient(135deg, hsla(210, 60%, 20%, 1) 60%, hsla(45, 100%, 50%, 1) 100%);
-    color: #fff;
-    flex-wrap: wrap;
+    background-color: #f4f4f4;
+    color: #ffff;
     gap: 40px;
 }
 
@@ -1832,15 +1890,14 @@ body {
 /* Left Text Section */
 
 .main-collage-text {
-    flex: 1;
-    max-width: 500px;
-    text-align: left;
+    text-align: center;
+    max-width: 800px;
 }
 
 .main-collage-heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .main-collage-paragraph {
@@ -1849,22 +1906,36 @@ body {
 }
 
 
+/* Video Section */
+
+.main-collage-video {
+    width: 100%;
+    max-width: 800px;
+}
+
+.main-collage-video video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
 /* Right Collage Section */
 
 .main-collage-images {
-    flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    width: 100%;
 }
 
 .main-collage-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 150px);
-    gap: 10px;
-    width: 450px;
-    height: 450px;
+    grid-template-rows: repeat(2, 200px);
+    gap: 15px;
+    width: 600px;
+    height: auto;
     position: relative;
 }
 
@@ -1884,47 +1955,19 @@ body {
 }
 
 
-/* Collage Items: Colored Boxes */
-
-.color-box-1 {
-    background-color: hsla(45, 100%, 50%, 0.8);
-    border-radius: 8px;
-}
-
-.color-box-2 {
-    background-color: hsla(210, 60%, 40%, 0.8);
-    border-radius: 8px;
-}
-
-
 /* Responsive Adjustments */
 
 @media (max-width: 1024px) {
     .main-collage-section {
-        flex-direction: column;
-        text-align: center;
         gap: 30px;
     }
-    .main-collage-text {
-        text-align: center;
+    .main-collage-grid {
+        grid-template-rows: repeat(2, 150px);
+        width: 500px;
     }
 }
 
 @media (max-width: 768px) {
-    .main-collage-heading {
-        font-size: 2.5rem;
-    }
-    .main-collage-paragraph {
-        font-size: 1.1rem;
-    }
-    .main-collage-grid {
-        grid-template-rows: repeat(3, 100px);
-        width: 300px;
-        height: 350px;
-    }
-}
-
-@media (max-width: 480px) {
     .main-collage-heading {
         font-size: 2rem;
     }
@@ -1932,7 +1975,18 @@ body {
         font-size: 1rem;
     }
     .main-collage-grid {
-        grid-template-rows: repeat(3, 80px);
+        grid-template-rows: repeat(2, 100px);
+        width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-collage-heading {
+        font-size: 1.8rem;
+    }
+    .main-collage-grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 100px);
         width: 100%;
         height: auto;
     }

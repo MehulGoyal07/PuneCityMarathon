@@ -893,12 +893,12 @@ body {
 }
 
 .content-list {
-    list-style: decimal;
     padding-left: 20px;
     margin-bottom: 20px;
 }
 
 .content-list li {
+    list-style: disc;
     font-size: 1.5rem;
     color: #555;
     line-height: 1.6;
