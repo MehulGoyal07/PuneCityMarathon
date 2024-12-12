@@ -1654,8 +1654,8 @@ body {
 /* Larger Logo for Conceptualized By */
 
 .conceptualized-logo {
-    width: 350px;
-    height: 230px;
+    width: 400px;
+    height: auto;
 }
 
 
@@ -1663,7 +1663,7 @@ body {
 
 .smaller-logo {
     width: 180px;
-    height: 120px;
+    height: auto;
 }
 
 .partners-sponsor-box h4 {
@@ -1706,11 +1706,11 @@ body {
     /* Adjusted sizes for mobile */
     .conceptualized-logo {
         width: 300px;
-        height: 150px;
+        height: auto;
     }
     .smaller-logo {
         width: 150px;
-        height: 90px;
+        height: auto;
     }
 }
 
