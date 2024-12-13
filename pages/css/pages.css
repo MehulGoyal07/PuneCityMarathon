@@ -1158,6 +1158,50 @@ body {
 
 
 /*-----------------------------------*\
+  #Venue Section
+\*-----------------------------------*/
+
+.venue-announcement-section {
+    min-height: calc(20vh - 50px);
+    /* Adjust '200px' based on your header and footer height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    /* Light background for a clean look */
+}
+
+.venue-container {
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for better visual */
+}
+
+
+/* Responsive adjustments for smaller screens */
+
+@media (max-width: 768px) {
+    .venue-container {
+        font-size: 3rem;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .venue-container {
+        font-size: 3rem;
+        padding: 20px;
+    }
+}
+
+
+/*-----------------------------------*\
   #Deliverables Section
 \*-----------------------------------*/
 
