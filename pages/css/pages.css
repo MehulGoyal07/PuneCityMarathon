@@ -1033,6 +1033,199 @@ body {
 
 
 /*-----------------------------------*\
+  #Prizes Section
+\*-----------------------------------*/
+
+.prizes-section {
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+}
+
+.prizes-heading {
+    font-size: 2.5rem;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.category-heading {
+    background-color: #003366;
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 15px;
+    margin: 40px 0 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.prizes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.prizes-table th,
+.prizes-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.prizes-table th {
+    background-color: #003366;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.prizes-table td {
+    font-size: 1rem;
+    color: black;
+}
+
+.prizes-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.prizes-table td[colspan="4"] {
+    background-color: #f4f4f9;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .prizes-heading {
+        font-size: 2rem;
+    }
+    .category-heading {
+        font-size: 1.6rem;
+        padding: 10px;
+    }
+    .prizes-table th,
+    .prizes-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .prizes-heading {
+        font-size: 1.8rem;
+    }
+    .category-heading {
+        font-size: 1.4rem;
+        padding: 8px;
+    }
+    .prizes-table th,
+    .prizes-table td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+}
+
+
+/*-----------------------------------*\
+  #Supported By Section
+\*-----------------------------------*/
+
+.supported-by-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.supported-heading {
+    font-size: 2.5rem;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sponsor-category {
+    margin-bottom: 40px;
+}
+
+.category-heading {
+    font-size: 1.8rem;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.category-heading.gold {
+    background-color: #ffd700;
+    /* Gold color */
+}
+
+.category-heading.silver {
+    background-color: #c0c0c0;
+    /* Silver color */
+}
+
+.category-heading.bronze {
+    background-color: #cd7f32;
+    /* Bronze color */
+}
+
+.category-heading.others {
+    background-color: #888888;
+    /* Gray for other sponsors */
+}
+
+.logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* Logo styling for proper sizing and visibility */
+
+.logo-grid img {
+    width: auto;
+    /* Fixed width */
+    height: 80px;
+    /* Fixed height */
+    object-fit: contain;
+    /* Ensure logos fit within the box without distortion */
+    margin-bottom: 15px;
+}
+
+
+/* Responsive Design for Smaller Screens */
+
+@media (max-width: 768px) {
+    .supported-heading {
+        font-size: 2rem;
+    }
+    .category-heading {
+        font-size: 1.6rem;
+    }
+    .logo-grid img {
+        width: 140px;
+        /* Smaller width for medium screens */
+        height: 90px;
+        /* Adjust height accordingly */
+    }
+}
+
+@media (max-width: 480px) {
+    .supported-heading {
+        font-size: 1.8rem;
+    }
+    .category-heading {
+        font-size: 1.4rem;
+    }
+    .logo-grid img {
+        width: 120px;
+        /* Smaller width for mobile screens */
+        height: 80px;
+        /* Adjust height accordingly */
+    }
+}
+
+
+/*-----------------------------------*\
   #Ambassadors Section
 \*-----------------------------------*/
 
