@@ -1131,12 +1131,91 @@ body {
     background-color: #f9f9f9;
 }
 
-.supported-heading {
+
+/* Centered Main Logo (Row 1) */
+
+.centered-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.centered-logo img {
+    height: 120px;
+    /* Slightly bigger size */
+    object-fit: contain;
+}
+
+
+/* Conceptualised and Associated Logos (Row 2) */
+
+.conceptualised-associated {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.logo-with-heading {
+    text-align: center;
+}
+
+.logo-with-heading h3 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.logo-with-heading img {
+    height: 80px;
+    object-fit: contain;
+}
+
+
+/* Supported By Section (Row 3) */
+
+.supported-heading-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.supported-heading-section h3 {
     font-size: 2.5rem;
     color: #003366;
+    margin-bottom: 20px;
+}
+
+
+/* Logos under Supported By */
+
+.supported-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.supported-logos img {
+    height: 80px;
+    object-fit: contain;
+}
+
+
+/* Powered By Section (Row 4) */
+
+.powered-by-section {
     text-align: center;
     margin-bottom: 40px;
 }
+
+.powered-by-section h3 {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+
+/* Gold, Silver, Bronze, and Other Sponsor Styling (as before) */
 
 .sponsor-category {
     margin-bottom: 40px;
@@ -1153,23 +1232,22 @@ body {
 
 .category-heading.gold {
     background-color: #ffd700;
-    /* Gold color */
 }
 
 .category-heading.silver {
     background-color: #c0c0c0;
-    /* Silver color */
 }
 
 .category-heading.bronze {
     background-color: #cd7f32;
-    /* Bronze color */
 }
 
 .category-heading.others {
     background-color: #888888;
-    /* Gray for other sponsors */
 }
+
+
+/* Logo Grid */
 
 .logo-grid {
     display: flex;
@@ -1178,49 +1256,45 @@ body {
     gap: 20px;
 }
 
-
-/* Logo styling for proper sizing and visibility */
-
 .logo-grid img {
     width: auto;
-    /* Fixed width */
     height: 80px;
-    /* Fixed height */
     object-fit: contain;
-    /* Ensure logos fit within the box without distortion */
     margin-bottom: 15px;
 }
 
 
-/* Responsive Design for Smaller Screens */
+/* Responsive Design */
 
 @media (max-width: 768px) {
-    .supported-heading {
-        font-size: 2rem;
+    .supported-heading-section h3,
+    .powered-by-section h3,
+    .conceptualised-associated h3 {
+        font-size: 1.8rem;
     }
-    .category-heading {
-        font-size: 1.6rem;
+    .two-logos img,
+    .supported-logos img,
+    .centered-logo img {
+        height: 70px;
     }
     .logo-grid img {
-        width: 140px;
-        /* Smaller width for medium screens */
-        height: 90px;
-        /* Adjust height accordingly */
+        height: 70px;
     }
 }
 
 @media (max-width: 480px) {
-    .supported-heading {
-        font-size: 1.8rem;
+    .supported-heading-section h3,
+    .powered-by-section h3,
+    .conceptualised-associated h3 {
+        font-size: 1.6rem;
     }
-    .category-heading {
-        font-size: 1.4rem;
+    .two-logos img,
+    .supported-logos img,
+    .centered-logo img {
+        height: 60px;
     }
     .logo-grid img {
-        width: 120px;
-        /* Smaller width for mobile screens */
-        height: 80px;
-        /* Adjust height accordingly */
+        height: 60px;
     }
 }
 
