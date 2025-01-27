@@ -40,40 +40,47 @@
 
 <body>
     <!-- 
-    - #Poster Dialog Box
-  -->
-    <div id="poster-dialog" class="dialog-overlay">
-        <div class="dialog-box">
-            <span class="close-button" id="close-btn">&times;</span>
-            <img src="./assets/images/dialogBox/dialogBox1.png" alt="Event Poster" class="poster-image">
-        </div>
-    </div>
-    <!-- 
     - #Dialog Box
   -->
     <!-- Dialog Box HTML Structure -->
-    <!-- <div id="main-dialog-overlay" class="main-dialog-overlay">
-        <div class="main-dialog-box">
-            <span class="main-dialog-close" id="main-dialog-close">&times;</span>
-            <h2 class="main-dialog-heading">Congratulations!</h2>
-            <p class="main-dialog-text">We are excited to announce that the results for the <strong>2024 Pune City Marathon</strong> have been declared!</p>
+    <div id="expo-dialog-overlay" class="expo-dialog-overlay">
+        <div class="expo-dialog-box">
+            <span class="expo-dialog-close" id="expo-dialog-close">&times;</span>
+            <h2 class="expo-dialog-heading">PCM2025 EXPO</h2>
+            <p class="expo-dialog-subheading">Bib & Kit Distribution</p>
 
-            <a href="results-page.html" class="main-dialog-button">Go to Results</a>
+            <div class="expo-details">
+                <div class="expo-detail">
+                    <div class="expo-day">
+                        <strong>EXPO DAY</strong>
+                    </div>
+                    <div class="expo-info">
+                        <div class="expo-date">
+                            <span>DAY 1</span> FRIDAY, 31ST JANUARY 2025.
+                        </div>
+                        <div class="expo-time">11:00 AM - 6:00 PM</div>
+                    </div>
+                    <div class="expo-info">
+                        <div class="expo-date">
+                            <span>DAY 2</span> SATURDAY, 01ST FEBRUARY 2025.
+                        </div>
+                        <div class="expo-time">11:00 AM - 6:00 PM</div>
+                    </div>
+                </div>
 
-            <p class="main-dialog-update-text">Stay updated on event news via:</p>
-            <div class="main-social-icons">
-                <a href="https://facebook.com" target="_blank">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-                <a href="https://twitter.com" target="_blank">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-                <a href="https://instagram.com" target="_blank">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </a>
+                <div class="expo-venue">
+                    <strong>EXPO VENUE</strong>
+                    <div>THE AMPHI THEATRE, THE POONA CLUB, PUNE - 01.</div>
+                </div>
+
+                <div class="expo-note">
+                    <strong>PLEASE NOTE:</strong>
+                    <div>DON'T FORGET TO COLLECT YOUR RACE KIT. NO BIB & KIT DISTRIBUTION ON RACE DAY.</div>
+                </div>
             </div>
         </div>
-    </div> -->
+    </div>
+
 
     <!-- 
     - #Registration Button
@@ -818,31 +825,21 @@
             partnersCurrentSlide = (partnersCurrentSlide + 1) % partnersSlides.length;
             showPartnersSlide(partnersCurrentSlide);
         }, 10000);
-        // Poster Dialog Box
-        document.addEventListener('DOMContentLoaded', function() {
-            const dialog = document.getElementById('poster-dialog');
-            const closeButton = document.getElementById('close-btn');
-
-            // Show the dialog when the page loads
-            dialog.classList.add('show');
-
-            // Close the dialog when the close button is clicked
-            closeButton.addEventListener('click', function() {
-                dialog.classList.remove('show');
-            });
-        });
         // Dialog Box
         // JavaScript to handle the dialog box close button
-        /*
-         window.onload = function() {
-            const dialogOverlay = document.getElementById('main-dialog-overlay');
-            const dialogClose = document.getElementById('main-dialog-close');
+
+        window.onload = function() {
+            const dialogOverlay = document.getElementById('expo-dialog-overlay'); // Use the correct ID
+            const dialogClose = document.getElementById('expo-dialog-close'); // Use the correct ID
+
+            // Show the dialog box when the page loads
             dialogOverlay.style.display = 'flex';
+
+            // Close the dialog box when the close button is clicked
             dialogClose.addEventListener('click', function() {
                 dialogOverlay.style.display = 'none';
             });
         };
-        */
     </script>
     <script src="./assets/js/script.js"></script>
     <!-- 

@@ -410,231 +410,171 @@ body {
 
 
 /*-----------------------------------*\
-  #Poster Dialog Box
-\*-----------------------------------*/
-
-
-/* Dialog Overlay */
-
-.dialog-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Semi-transparent background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    visibility: hidden;
-    /* Hidden initially */
-    opacity: 0;
-    transition: visibility 0s, opacity 0.3s ease;
-}
-
-
-/* Dialog Box */
-
-.dialog-box {
-    position: relative;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-    max-width: 90vw;
-    max-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-
-/* Poster Image */
-
-.poster-image {
-    width: auto;
-    /* Maintain width based on height */
-    height: 100%;
-    /* Always fill height of the dialog box */
-    max-width: 100%;
-    object-fit: contain;
-    /* Prevent distortion, maintain aspect ratio */
-}
-
-
-/* Close Button */
-
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    color: #fff;
-    background-color: #333;
-    border: none;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    line-height: 35px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-
-/* Display dialog when active */
-
-.dialog-overlay.show {
-    visibility: visible;
-    opacity: 1;
-}
-
-
-/* Responsive Adjustments */
-
-@media (max-width: 768px) {
-    .dialog-box {
-        padding: 8px;
-    }
-}
-
-@media (max-width: 480px) {
-    .dialog-box {
-        padding: 5px;
-    }
-    .close-button {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        font-size: 22px;
-    }
-}
-
-
-/*-----------------------------------*\
   #Dialog Box
 \*-----------------------------------*/
 
 
 /* Dialog Overlay (Blurring the Background) */
 
-.main-dialog-overlay {
+.expo-dialog-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    /* Background with opacity */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
     backdrop-filter: blur(5px);
-    /* Makes the background blur */
 }
 
 
-/* Dialog Box Styling */
+/* Dialog Box */
 
-.main-dialog-box {
+.expo-dialog-box {
     background: linear-gradient(135deg, hsla(210, 60%, 20%, 1) 60%, hsla(45, 100%, 50%, 1) 100%);
-    padding: 30px;
+    padding: 40px;
     border-radius: 15px;
     width: 90%;
-    max-width: 600px;
+    max-width: 650px;
     text-align: center;
     position: relative;
-    color: #fff;
+    color: #ffffff;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 
 /* Close Button */
 
-.main-dialog-close {
+.expo-dialog-close {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 20px;
+    right: 20px;
     font-size: 2rem;
     cursor: pointer;
-    color: #fff;
+    color: #ffffff;
     transition: color 0.3s;
 }
 
-.main-dialog-close:hover {
+.expo-dialog-close:hover {
     color: #FFD700;
-    /* Golden Yellow on Hover */
+    /* Golden yellow for better contrast on hover */
 }
 
 
-/* Heading and Text */
+/* Heading */
 
-.main-dialog-heading {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    font-weight: bold;
+.expo-dialog-heading {
+    font-size: 2.8rem;
+    color: #FFD700;
+    /* Changed to golden yellow to match the gradient theme */
+    margin-bottom: 10px;
 }
 
-.main-dialog-text {
-    font-size: 1.2rem;
+
+/* Subheading */
+
+.expo-dialog-subheading {
+    font-size: 1.8rem;
+    color: #ffffff;
+    /* Updated to white to align with the dark background */
     margin-bottom: 30px;
 }
 
 
-/* Results Button */
+/* Details Section */
 
-.main-dialog-button {
-    background-color: #FFD700;
-    color: #000;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s;
+.expo-details {
+    text-align: left;
+    margin-bottom: 20px;
 }
 
-.main-dialog-button:hover {
-    background-color: #FFA500;
-    /* Darker Yellow on Hover */
+.expo-detail {
+    margin-bottom: 20px;
 }
 
 
-/* Social Media Links */
+/* Day Section */
 
-.main-dialog-update-text {
-    margin: 20px 0 10px;
-    font-size: 1.1rem;
-}
-
-.main-social-icons a {
-    margin: 0 10px;
-    font-size: 2rem;
+.expo-day {
+    font-size: 1.4rem;
     color: #FFD700;
-    /* Golden Yellow for Social Icons */
-    transition: color 0.3s;
+    /* Using golden yellow to match the theme */
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.main-social-icons a:hover {
-    color: #FFA500;
+
+/* Info Section */
+
+.expo-info {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+
+/* Date and Time */
+
+.expo-date span {
+    color: #FFD700;
+    /* Golden yellow for highlighted date */
+    font-weight: bold;
+}
+
+.expo-time {
+    font-size: 1.2rem;
+    color: #ffffff;
+    /* Changed to white to match the text color theme */
+}
+
+
+/* Venue Section */
+
+.expo-venue {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #FFD700;
+    /* Golden yellow for venue */
+    margin-bottom: 15px;
+}
+
+
+/* Note Section */
+
+.expo-note {
+    background-color: #ffffff;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #222;
+    border-radius: 10px;
+}
+
+.expo-note div {
+    font-size: 1rem;
+    margin-top: 5px;
 }
 
 
 /* Responsive Styling */
 
 @media (max-width: 768px) {
-    .main-dialog-heading {
-        font-size: 2rem;
+    .expo-dialog-heading {
+        font-size: 2.2rem;
     }
-    .main-dialog-text {
+    .expo-dialog-subheading {
+        font-size: 1.5rem;
+    }
+    .expo-details {
+        text-align: center;
+    }
+    .expo-info {
         font-size: 1rem;
     }
-    .main-dialog-button {
+    .expo-time {
         font-size: 1rem;
     }
 }
