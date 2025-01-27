@@ -40,6 +40,15 @@
 
 <body>
     <!-- 
+    - #Poster Dialog Box
+  -->
+    <div id="poster-dialog" class="dialog-overlay">
+        <div class="dialog-box">
+            <span class="close-button" id="close-btn">&times;</span>
+            <img src="./assets/images/dialogBox/dialogBox1.png" alt="Event Poster" class="poster-image">
+        </div>
+    </div>
+    <!-- 
     - #Dialog Box
   -->
     <!-- Dialog Box HTML Structure -->
@@ -809,21 +818,31 @@
             partnersCurrentSlide = (partnersCurrentSlide + 1) % partnersSlides.length;
             showPartnersSlide(partnersCurrentSlide);
         }, 10000);
+        // Poster Dialog Box
+        document.addEventListener('DOMContentLoaded', function() {
+            const dialog = document.getElementById('poster-dialog');
+            const closeButton = document.getElementById('close-btn');
 
+            // Show the dialog when the page loads
+            dialog.classList.add('show');
+
+            // Close the dialog when the close button is clicked
+            closeButton.addEventListener('click', function() {
+                dialog.classList.remove('show');
+            });
+        });
         // Dialog Box
         // JavaScript to handle the dialog box close button
-        window.onload = function() {
+        /*
+         window.onload = function() {
             const dialogOverlay = document.getElementById('main-dialog-overlay');
             const dialogClose = document.getElementById('main-dialog-close');
-
-            // Show the dialog box on page load
             dialogOverlay.style.display = 'flex';
-
-            // Close the dialog box when clicking the close button
             dialogClose.addEventListener('click', function() {
                 dialogOverlay.style.display = 'none';
             });
         };
+        */
     </script>
     <script src="./assets/js/script.js"></script>
     <!-- 
