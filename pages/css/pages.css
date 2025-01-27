@@ -1142,7 +1142,6 @@ body {
 
 .centered-logo img {
     height: 120px;
-    /* Slightly bigger size */
     object-fit: contain;
 }
 
@@ -1152,18 +1151,27 @@ body {
 .conceptualised-associated {
     display: flex;
     justify-content: center;
+    align-items: center;
+    /* Center vertically */
     gap: 40px;
     margin-bottom: 40px;
+    flex-wrap: wrap;
+    /* Ensure wrapping on smaller screens */
+    text-align: center;
+    /* Center text alignment */
 }
 
 .logo-with-heading {
-    text-align: center;
+    max-width: 200px;
+    /* Prevent large logos from overflowing */
 }
 
 .logo-with-heading h3 {
     font-size: 1.8rem;
     color: #003366;
     margin-bottom: 10px;
+    word-wrap: break-word;
+    /* Break long words */
 }
 
 .logo-with-heading img {
@@ -1193,6 +1201,7 @@ body {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    /* Allow wrapping for smaller screens */
 }
 
 .supported-logos img {
@@ -1215,7 +1224,7 @@ body {
 }
 
 
-/* Gold, Silver, Bronze, and Other Sponsor Styling (as before) */
+/* Sponsor Categories */
 
 .sponsor-category {
     margin-bottom: 40px;
@@ -1272,6 +1281,36 @@ body {
     .conceptualised-associated h3 {
         font-size: 1.8rem;
     }
+    .conceptualised-associated {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        /* Balanced spacing between items */
+        text-align: center;
+        margin: 0 auto;
+        /* Centering the entire section */
+        width: 90%;
+        /* Constrain the width for better appearance */
+    }
+    .logo-with-heading {
+        max-width: 200px;
+        /* Consistent width for all logos */
+        margin: 0 auto;
+        /* Center the individual logos */
+    }
+    .logo-with-heading img {
+        display: block;
+        margin: 0 auto;
+        /* Ensures the image is centered */
+        height: 70px;
+        /* Adjust image size for smaller screens */
+    }
+    .logo-with-heading h3 {
+        font-size: 1.5rem;
+        /* Slightly smaller heading size */
+        margin-bottom: 10px;
+    }
     .two-logos img,
     .supported-logos img,
     .centered-logo img {
@@ -1279,6 +1318,10 @@ body {
     }
     .logo-grid img {
         height: 70px;
+    }
+    .supported-logos {
+        gap: 15px;
+        /* Reduce gap for smaller screens */
     }
 }
 
@@ -1288,6 +1331,18 @@ body {
     .conceptualised-associated h3 {
         font-size: 1.6rem;
     }
+    .conceptualised-associated {
+        gap: 20px;
+        /* Reduce spacing between items further */
+    }
+    .logo-with-heading img {
+        height: 60px;
+        /* Further reduce image height */
+    }
+    .logo-with-heading h3 {
+        font-size: 1.4rem;
+        /* Compact heading size */
+    }
     .two-logos img,
     .supported-logos img,
     .centered-logo img {
@@ -1295,6 +1350,12 @@ body {
     }
     .logo-grid img {
         height: 60px;
+    }
+    .supported-logos {
+        display: grid;
+        /* Two logos per row */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 }
 
