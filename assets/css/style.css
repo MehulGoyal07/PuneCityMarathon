@@ -410,6 +410,244 @@ body {
 
 
 /*-----------------------------------*\
+  #Supported By Section
+\*-----------------------------------*/
+
+.supported-by-section {
+    padding: 40px 20px;
+    background-color: #ffff;
+}
+
+
+/* Centered Main Logo (Row 1) */
+
+.centered-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.centered-logo img {
+    height: 120px;
+    object-fit: contain;
+}
+
+
+/* Conceptualised and Associated Logos (Row 2) */
+
+.conceptualised-associated {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center vertically */
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    /* Ensure wrapping on smaller screens */
+    text-align: center;
+    /* Center text alignment */
+}
+
+.logo-with-heading {
+    max-width: 200px;
+    /* Prevent large logos from overflowing */
+}
+
+.logo-with-heading h3 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    /* Break long words */
+}
+
+.logo-with-heading img {
+    height: 80px;
+    object-fit: contain;
+}
+
+
+/* Supported By Section (Row 3) */
+
+.supported-heading-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.supported-heading-section h3 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+
+/* Logos under Supported By */
+
+.supported-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    /* Allow wrapping for smaller screens */
+}
+
+.supported-logos img {
+    height: 80px;
+    object-fit: contain;
+}
+
+
+/* Powered By Section (Row 4) */
+
+.powered-by-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.powered-by-section h3 {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+
+/* Sponsor Categories */
+
+.sponsor-category {
+    margin-bottom: 40px;
+}
+
+.category-heading {
+    font-size: 1.8rem;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.category-heading.gold {
+    background-color: #ffd700;
+}
+
+.category-heading.silver {
+    background-color: #c0c0c0;
+}
+
+.category-heading.bronze {
+    background-color: #cd7f32;
+}
+
+.category-heading.others {
+    background-color: #888888;
+}
+
+
+/* Logo Grid */
+
+.logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo-grid img {
+    width: auto;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .supported-heading-section h3,
+    .powered-by-section h3,
+    .conceptualised-associated h3 {
+        font-size: 1.8rem;
+    }
+    .conceptualised-associated {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        /* Balanced spacing between items */
+        text-align: center;
+        margin: 0 auto;
+        /* Centering the entire section */
+        width: 90%;
+        /* Constrain the width for better appearance */
+    }
+    .logo-with-heading {
+        max-width: 200px;
+        /* Consistent width for all logos */
+        margin: 0 auto;
+        /* Center the individual logos */
+    }
+    .logo-with-heading img {
+        display: block;
+        margin: 0 auto;
+        /* Ensures the image is centered */
+        height: 70px;
+        /* Adjust image size for smaller screens */
+    }
+    .logo-with-heading h3 {
+        font-size: 1.5rem;
+        /* Slightly smaller heading size */
+        margin-bottom: 10px;
+    }
+    .two-logos img,
+    .supported-logos img,
+    .centered-logo img {
+        height: 70px;
+    }
+    .logo-grid img {
+        height: 70px;
+    }
+    .supported-logos {
+        gap: 15px;
+        /* Reduce gap for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .supported-heading-section h3,
+    .powered-by-section h3,
+    .conceptualised-associated h3 {
+        font-size: 1.6rem;
+    }
+    .conceptualised-associated {
+        gap: 20px;
+        /* Reduce spacing between items further */
+    }
+    .logo-with-heading img {
+        height: 60px;
+        /* Further reduce image height */
+    }
+    .logo-with-heading h3 {
+        font-size: 1.4rem;
+        /* Compact heading size */
+    }
+    .two-logos img,
+    .supported-logos img,
+    .centered-logo img {
+        height: 60px;
+    }
+    .logo-grid img {
+        height: 60px;
+    }
+    .supported-logos {
+        display: grid;
+        /* Two logos per row */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+
+/*-----------------------------------*\
   #Dialog Box
 \*-----------------------------------*/
 
